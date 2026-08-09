@@ -1,99 +1,26 @@
 {
-  "candidate": {
-    "full_name": "Ayush Singh",
-    "title": "AI Engineer | LLM Post-Training Specialist",
-    "focus_areas": ["Computer Vision", "Generative AI", "LLM Post-Training", "Contactless UIs", "Competitive Programming"],
-    "profiles": {
-      "linkedin": "Available via button on portfolio",
-      "codolio": "Available via button on portfolio",
-      "github": "Available on portfolio"
-    }
-  },
+  "name": "Ayush Singh",
+  "role": "AI Engineer | LLM Post-Training Specialist",
   "qa_database": [
     {
-      "category": "HR & Hiring Focus",
-      "questions": [
-        {"q": "Why should an HR or hiring manager hire Ayush?", "a": "Ayush combines a strong CS foundation with proven execution consistency—demonstrated by 400+ solved LeetCode problems and a 360-day daily streak. He brings hands-on experience in LLM post-training and computer vision research."},
-        {"q": "Is Ayush available for full-time roles or internships?", "a": "Yes, Ayush is actively seeking opportunities in AI Engineering, Machine Learning, and Software Development."},
-        {"q": "What makes Ayush stand out from other candidates?", "a": "His dual focus on algorithmic problem-solving speed and specialized AI engineering (LLMs and Computer Vision), backed by practical research and platform task execution."},
-        {"q": "What are Ayush's career goals?", "a": "To build scalable, cutting-edge AI systems and advance post-training workflows for Large Language Models."},
-        {"q": "Is Ayush open to remote work or relocation?", "a": "Yes, he is open to remote, hybrid, and relocation opportunities depending on the role requirements."},
-        {"q": "How does Ayush handle high-pressure deadlines?", "a": "He breaks complex projects into modular milestones and relies on disciplined daily coding routines to ensure steady delivery."},
-        {"q": "How does Ayush approach teamwork and collaboration?", "a": "He values structured code reviews, clear documentation, and active knowledge sharing within developer teams."},
-        {"q": "What soft skills does Ayush possess?", "a": "Strong technical communication, research presentation skills, self-discipline, and structured problem decomposition."},
-        {"q": "How does Ayush stay updated with modern AI advancements?", "a": "By reading recent research papers, experimenting with open-source LLM post-training setups, and participating in technical coding communities."},
-        {"q": "What type of company culture does Ayush thrive in?", "a": "An engineering-driven environment that values continuous learning, technical rigor, and autonomy."}
-      ]
+      "q": "Why should HR hire Ayush?",
+      "a": "Ayush combines strong algorithmic problem solving (400+ LeetCode problems, 360-day daily streak) with practical research in computer vision and LLM post-training."
     },
     {
-      "category": "Strengths & Weaknesses",
-      "questions": [
-        {"q": "What are Ayush's biggest technical strengths?", "a": "C++ programming, Python, OpenCV, MediaPipe, LLM fine-tuning, data structures, and algorithmic optimization."},
-        {"q": "What are Ayush's professional strengths?", "a": "Consistency, dedication to daily problem solving, research execution, and structured technical writing."},
-        {"q": "What is Ayush's primary weakness?", "a": "He can occasionally over-engineer technical solutions for extreme edge cases, which he manages by setting strict sprint deadlines."},
-        {"q": "How does Ayush handle critical feedback?", "a": "He views feedback as objective data to improve code efficiency, architecture design, and workflow processes."},
-        {"q": "How does Ayush prioritize tasks when overloaded?", "a": "He uses impact-versus-effort evaluation and strict time-blocking to tackle core engineering dependencies first."},
-        {"q": "What is Ayush's approach to learning new frameworks?", "a": "He builds hands-on proof-of-concept projects rather than just reading documentation, accelerating practical mastery."},
-        {"q": "How consistent is Ayush with coding?", "a": "Extremely consistent—he maintained an uninterrupted 360-day daily coding streak while solving 400+ technical problems on LeetCode."},
-        {"q": "Is Ayush better at backend engineering or AI research?", "a": "He bridges both—capable of writing production-level backend logic in C++/Python while understanding deep AI model mechanics."},
-        {"q": "How does Ayush handle debugging complex bugs?", "a": "He uses systematically isolated test cases, memory profilers, and logical trace points rather than random trial-and-error."},
-        {"q": "How does Ayush adapt to changing project requirements?", "a": "By writing modular, decoupled code that can easily accommodate architecture changes."}
-      ]
+      "q": "What are his top projects?",
+      "a": "His featured project is the Virtual Hand-Gesture Calculator built with Python, OpenCV, and MediaPipe, alongside LLM fine-tuning experiments."
     },
     {
-      "category": "Coding & Problem Solving",
-      "questions": [
-        {"q": "What is Ayush's competitive programming record?", "a": "He has solved over 400 questions on LeetCode with an impressive 360-day daily challenge streak."},
-        {"q": "Which core programming languages does Ayush prefer?", "a": "C++ for high-performance algorithmic execution and Python for AI, ML, and computer vision pipelines."},
-        {"q": "What Data Structures is Ayush most proficient in?", "a": "Arrays, Trees, Graphs, Dynamic Programming, Heap/Priority Queues, and Hash Maps."},
-        {"q": "What is Ayush's approach to algorithmic efficiency?", "a": "He always optimizes for time complexity first (O(N log N) or O(N)) while maintaining reasonable space complexity limits."},
-        {"q": "Has Ayush solved interval and array intersection problems?", "a": "Yes, he regularly tackles complex array manipulation, sliding window, and interval intersection algorithms."},
-        {"q": "Where can recruiters view Ayush's coding stats?", "a": "On his Codolio profile and LeetCode activity logs accessible through his portfolio links."},
-        {"q": "Why does Ayush practice competitive programming daily?", "a": "To keep his core computer science fundamentals sharp and quickly process complex logical constraints under time pressure."},
-        {"q": "Does Ayush write clean, documented code?", "a": "Yes, he follows clean code principles, modular function separation, and meaningful variable naming conventions."},
-        {"q": "What build tools or version control does Ayush use?", "a": "Git, GitHub, and standard C++/Python environment toolchains."},
-        {"q": "Has Ayush worked on memory management in C++?", "a": "Yes, including pointers, references, dynamic memory allocation, and STL containers."}
-      ]
+      "q": "What are his core strengths?",
+      "a": "His core technical strengths include C++, Python, OpenCV, MediaPipe, competitive programming, and LLM fine-tuning."
     },
     {
-      "category": "Projects & AI Expertise",
-      "questions": [
-        {"q": "What is the Virtual Hand-Gesture Calculator project?", "a": "An interactive contactless user interface built using Python, MediaPipe, and OpenCV that interprets hand gestures in real-time to execute mathematical operations."},
-        {"q": "What technology stack was used in the Virtual Hand-Gesture Calculator?", "a": "Python, OpenCV for video frame processing, MediaPipe for hand landmark detection, and custom mathematical logic processing."},
-        {"q": "What is Ayush's specialization in Large Language Models (LLMs)?", "a": "He specializes in LLM Post-Training, including fine-tuning techniques, instruction tuning, prompt engineering, and evaluation workflows."},
-        {"q": "What experience does Ayush have with Computer Vision?", "a": "Real-time frame processing, hand gesture landmark mapping, object detection concepts, and OpenCV integration."},
-        {"q": "What research work has Ayush completed?", "a": "He authored and presented an academic research paper on contactless gesture-driven interfaces before an evaluation panel."},
-        {"q": "Has Ayush worked on Generative AI systems?", "a": "Yes, exploring LLM pipeline post-training, prompt engineering strategies, and generative computer vision models."},
-        {"q": "What platforms has Ayush completed technical tasks on?", "a": "He has executed AI task workflows and platform guidelines on platforms like Outlier and Multimango."},
-        {"q": "How does Ayush evaluate AI model outputs?", "a": "Using structured benchmark criteria, instruction-following evaluation datasets, and post-training alignment checks."},
-        {"q": "Can Ayush integrate AI models into web applications?", "a": "Yes, as demonstrated by integrating real-time LLM API endpoints directly into frontend user interfaces."},
-        {"q": "What future projects is Ayush planning?", "a": "Advanced post-training optimization pipelines for open-weight LLMs and multimodal vision-language interfaces."}
-      ]
+      "q": "What is his biggest weakness?",
+      "a": "He can occasionally over-engineer technical solutions for edge cases, which he manages by setting strict sprint deadlines."
     },
     {
-      "category": "Work Experience & Workflows",
-      "questions": [
-        {"q": "What experience does Ayush have on task crowdsourcing platforms?", "a": "He has reviewed, evaluated, and executed technical workflows according to strict quality guidelines on Outlier and Multimango."},
-        {"q": "How does Ayush ensure high quality on task workflows?", "a": "By closely following platform-specific guideline documentation and maintaining low error rates during execution."},
-        {"q": "Does Ayush have experience presenting technical work?", "a": "Yes, he has presented academic research papers and internal project panels."},
-        {"q": "How does Ayush handle ambiguous project requirements?", "a": "He clarifies constraints upfront, creates small test prototypes, and iterates based on feedback."},
-        {"q": "Has Ayush worked with REST APIs and web endpoints?", "a": "Yes, connecting frontend clients with serverless function backends and LLM inference providers."},
-        {"q": "What development tools does Ayush use daily?", "a": "VS Code, Git, GitHub, Linux/Terminal environments, and Python virtual environments."},
-        {"q": "Is Ayush experienced in technical documentation?", "a": "Yes, writing structured research papers, clear README files, and clean inline code comments."},
-        {"q": "How fast can Ayush onboard onto a new tech stack?", "a": "Very fast, owing to his solid foundational grasp of algorithms, OOP, and data structures."},
-        {"q": "How does Ayush approach software debugging?", "a": "Using unit tests, print tracing, and modular isolation of broken components."},
-        {"q": "Does Ayush understand AI model post-training pipelines?", "a": "Yes, including dataset curation, supervised fine-tuning concepts, and preference alignment."}
-      ]
-    },
-    {
-      "category": "Education & Background",
-      "questions": [
-        {"q": "What is Ayush's academic specialization?", "a": "Computer Science and AI student focusing on LLMs, Computer Vision, and Generative Systems."},
-        {"q": "Where can I view Ayush's full resume?", "a": "By clicking the 'Resume' button in the main navigation menu at the top of the portfolio site."},
-        {"q": "How can an HR recruiter contact Ayush directly?", "a": "Through the 'Contact' section on his portfolio or by clicking the 'LinkedIn' button on the homepage."},
-        {"q": "What academic milestones has Ayush achieved?", "a": "Successfully delivering a research paper presentation before an academic panel and completing foundational AI coursework."},
-        {"q": "What programming paradigms is Ayush trained in?", "a": "Object-Oriented Programming (OOP), Procedural Programming, and Functional/Modular Scripting."}
-      ]
+      "q": "What platforms has he worked on?",
+      "a": "He has completed AI task workflows and platform guidelines on platforms like Outlier and Multimango."
     }
   ]
 }
