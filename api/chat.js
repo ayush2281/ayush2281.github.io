@@ -46,13 +46,13 @@ export default async function handler(req, res) {
   try {
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
-      return res.status(200).json({ reply: "⚠️ GEMINI_API_KEY is missing or undefined in Vercel settings." });
+      return res.status(200).json({ reply: "⚠️ GEMINI_API_KEY is missing in Vercel settings." });
     }
 
     const genAI = new GoogleGenerativeAI(apiKey);
     
-    // Using gemini-1.5-flash for universal free-tier availability across all accounts
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    // Updated model name for the legacy SDK
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const systemPrompt = `You are Ayush AI, representing candidate Ayush Singh. Answer concisely and accurately using this candidate data: ${JSON.stringify(portfolioData)}`;
     const userMessage = req.body ? req.body.message : "Hello";
@@ -61,7 +61,13 @@ export default async function handler(req, res) {
     return res.status(200).json({ reply: result.response.text() });
   } catch (error) {
     console.error("API Error:", error);
-    // Display actual error so we can pinpoint it instantly
-    return res.status(200).json({ reply: `Debug Error: ${error.message || 'Unknown error'}` });
+    
+    if (error.status === 429 || (error.message && error.message.includes("429"))) {
+      return res.status(200).json({ 
+        reply: "Ayush AI is receiving high traffic right now! Briefly, Ayush is an AI Engineer specializing in LLMs and Computer Vision with 400+ LeetCode problems solved and a 360-day coding streak. Please try asking again in a few seconds!" 
+      });
+    }
+
+    return res.status(200).json({ reply: `API Error: ${error.message || 'Error processing request'}` });
   }
 }
