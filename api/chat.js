@@ -2,19 +2,35 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-// Read JSON context dynamically to avoid import assertion errors
-const filePath = join(process.cwd(), 'portfolio_context.json');
-const portfolioData = JSON.parse(readFileSync(filePath, 'utf8'));
-
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-
 export default async function handler(req, res) {
+  // Enable CORS
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  );
+
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { message } = req.body;
+    const filePath = join(process.cwd(), 'portfolio_context.json');
+    const portfolioData = JSON.parse(readFileSync(filePath, 'utf8'));
+
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      return res.status(500).json({ reply: "API Key missing in environment variables." });
+    }
+
+    const genAI = new GoogleGenerativeAI(apiKey);
 
     const systemPrompt = `
 You are Ayush AI, an interactive portfolio assistant for candidate Ayush Singh.
@@ -26,8 +42,8 @@ ${JSON.stringify(portfolioData, null, 2)}
 INSTRUCTIONS:
 1. Search the candidate database to answer the user's question accurately.
 2. Maintain a confident, polite, and professional tone at all times.
-3. Highlight key achievements: 400+ LeetCode problems, 360-day streak, LLM post-training skills, and computer vision projects.
-4. Keep answers concise (1-2 paragraphs max) unless explicit technical depth is requested.
+3. Highlight key achievements: 400+ LeetCode problems, 360-day streak, LLM post-training skills, Virtual Hand-Gesture Calculator project, and academic research work.
+4. Keep answers concise (1-2 paragraphs max).
 `;
 
     const model = genAI.getGenerativeModel({
@@ -35,9 +51,13 @@ INSTRUCTIONS:
       systemInstruction: systemPrompt
     });
 
+    const { message } = req.body;
     const result = await model.generateContent(message);
-    return res.status(200).json({ reply: result.response.text() });
+    const responseText = result.response.text();
+
+    return res.status(200).json({ reply: responseText });
   } catch (error) {
-    return res.status(500).json({ error: "Error generating response" });
+    console.error("Error:", error);
+    return res.status(500).json({ reply: "Internal server error processing response." });
   }
 }
