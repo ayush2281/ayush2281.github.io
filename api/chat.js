@@ -40,22 +40,19 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-  if (req.method === 'OPTIONS') {
-    return res.status(200).end();
-  }
-
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+  if (req.method === 'OPTIONS') return res.status(200).end();
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
-      return res.status(200).json({ reply: "⚠️ GEMINI_API_KEY is missing in Vercel environment settings." });
+      return res.status(200).json({ reply: "⚠️ GEMINI_API_KEY is missing or undefined in Vercel settings." });
     }
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    
+    // Using gemini-1.5-flash for universal free-tier availability across all accounts
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const systemPrompt = `You are Ayush AI, representing candidate Ayush Singh. Answer concisely and accurately using this candidate data: ${JSON.stringify(portfolioData)}`;
     const userMessage = req.body ? req.body.message : "Hello";
@@ -64,14 +61,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ reply: result.response.text() });
   } catch (error) {
     console.error("API Error:", error);
-    
-    // Catch rate limit (429) specifically and return a friendly recruiter message
-    if (error.status === 429 || (error.message && error.message.includes("429"))) {
-      return res.status(200).json({ 
-        reply: "Ayush AI is receiving high traffic right now! Briefly, Ayush is an AI Engineer specializing in LLMs and Computer Vision with 400+ LeetCode problems solved and a 360-day coding streak. Please try asking again in a few seconds!" 
-      });
-    }
-
-    return res.status(200).json({ reply: "Thanks for reaching out! Ayush's AI assistant is currently updating. Please check out his portfolio buttons or try again in a moment." });
+    // Display actual error so we can pinpoint it instantly
+    return res.status(200).json({ reply: `Debug Error: ${error.message || 'Unknown error'}` });
   }
 }
