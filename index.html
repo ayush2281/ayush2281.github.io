@@ -828,4 +828,81 @@
     </script>
 
 </body>
+    <!-- Floating AI Chat Button -->
+<div id="ai-chat-btn" onclick="toggleChat()" style="position: fixed; bottom: 25px; right: 25px; background: #FFC107; color: #000; padding: 14px 20px; border-radius: 30px; font-weight: bold; font-family: sans-serif; cursor: pointer; box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4); z-index: 999999; display: flex; align-items: center; gap: 8px;">
+  <span>✨ Ask Ayush AI</span>
+</div>
+
+<!-- Floating AI Chat Window -->
+<div id="ai-chat-window" style="display: none; position: fixed; bottom: 85px; right: 25px; width: 350px; height: 480px; background: #000000; border: 1px solid #333; border-radius: 16px; flex-direction: column; z-index: 999999; color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.8); font-family: sans-serif; overflow: hidden;">
+  
+  <!-- Header -->
+  <div style="background: #111; padding: 14px 16px; font-weight: bold; border-bottom: 1px solid #222; display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <span style="width: 10px; height: 10px; background: #28a745; border-radius: 50%; display: inline-block;"></span>
+      <span style="color: #FFC107;">Ayush AI Assistant</span>
+    </div>
+    <span onclick="toggleChat()" style="cursor: pointer; color: #888; font-size: 18px;">✕</span>
+  </div>
+
+  <!-- Messages Container -->
+  <div id="chat-messages" style="flex: 1; padding: 14px; overflow-y: auto; font-size: 13.5px; display: flex; flex-direction: column; gap: 10px;">
+    <div style="background: #1a1a1a; color: #ddd; padding: 10px 14px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%;">
+      Hi! I'm Ayush's AI representative. Ask me anything about his projects, 360-day LeetCode streak, background, or why HR should hire him!
+    </div>
+  </div>
+
+  <!-- Quick Suggestion Pills -->
+  <div style="padding: 6px 12px; display: flex; gap: 6px; overflow-x: auto; background: #0a0a0a; border-top: 1px solid #1f1f1f;">
+    <button onclick="sendQuickMsg('Why should HR hire Ayush?')" style="background: #1e1e1e; color: #FFC107; border: 1px solid #333; border-radius: 12px; padding: 4px 10px; font-size: 11px; cursor: pointer; white-space: nowrap;">Why hire Ayush?</button>
+    <button onclick="sendQuickMsg('What are his top projects?')" style="background: #1e1e1e; color: #FFC107; border: 1px solid #333; border-radius: 12px; padding: 4px 10px; font-size: 11px; cursor: pointer; white-space: nowrap;">Top Projects</button>
+  </div>
+
+  <!-- Input Area -->
+  <div style="padding: 12px; display: flex; gap: 8px; background: #111; border-top: 1px solid #222;">
+    <input type="text" id="chat-input" placeholder="Ask a question..." onkeydown="if(event.key==='Enter') sendMessage()" style="flex: 1; padding: 10px 12px; background: #1a1a1a; border: 1px solid #333; color: #fff; border-radius: 8px; outline: none; font-size: 13px;">
+    <button onclick="sendMessage()" style="background: #FFC107; color: #000; border: none; padding: 10px 14px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 13px;">Send</button>
+  </div>
+</div>
+
+<script>
+  function toggleChat() {
+    const win = document.getElementById('ai-chat-window');
+    win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none';
+  }
+
+  function sendQuickMsg(text) {
+    document.getElementById('chat-input').value = text;
+    sendMessage();
+  }
+
+  async function sendMessage() {
+    const input = document.getElementById('chat-input');
+    const msgBox = document.getElementById('chat-messages');
+    if (!input.value.trim()) return;
+
+    const userMsg = input.value;
+    msgBox.innerHTML += `<div style="display: flex; justify-content: flex-end;"><span style="background: #FFC107; color: #000; font-weight: 600; padding: 8px 12px; border-radius: 12px; max-width: 80%;">${userMsg}</span></div>`;
+    input.value = '';
+
+    const botMsgDiv = document.createElement('div');
+    botMsgDiv.style.display = 'flex';
+    botMsgDiv.innerHTML = `<span style="background: #1a1a1a; color: #888; padding: 8px 12px; border-radius: 12px; border: 1px solid #2a2a2a;">Thinking...</span>`;
+    msgBox.appendChild(botMsgDiv);
+    msgBox.scrollTop = msgBox.scrollHeight;
+
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: userMsg })
+      });
+      const data = await res.json();
+      botMsgDiv.innerHTML = `<span style="background: #1a1a1a; color: #ddd; padding: 8px 12px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%;">${data.reply}</span>`;
+    } catch (e) {
+      botMsgDiv.innerHTML = `<span style="background: #1a1a1a; color: #ff5555; padding: 8px 12px; border-radius: 12px; border: 1px solid #2a2a2a;">Unable to connect to AI server.</span>`;
+    }
+    msgBox.scrollTop = msgBox.scrollHeight;
+  }
+</script>
 </html>
