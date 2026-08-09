@@ -1,5 +1,10 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
-import portfolioData from '../portfolio_context.json' assert { type: 'json' };
+import { readFileSync } from 'fs';
+import { join } from 'path';
+
+// Read JSON context dynamically to avoid import assertion errors
+const filePath = join(process.cwd(), 'portfolio_context.json');
+const portfolioData = JSON.parse(readFileSync(filePath, 'utf8'));
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
@@ -19,9 +24,9 @@ CANDIDATE DATABASE:
 ${JSON.stringify(portfolioData, null, 2)}
 
 INSTRUCTIONS:
-1. Search the "qa_database" array to match the user's question with the relevant question and answer context.
+1. Search the candidate database to answer the user's question accurately.
 2. Maintain a confident, polite, and professional tone at all times.
-3. If asked about his strengths, weaknesses, coding achievements, research projects, or why HR should hire him, synthesize the relevant answers from the JSON database.
+3. Highlight key achievements: 400+ LeetCode problems, 360-day streak, LLM post-training skills, and computer vision projects.
 4. Keep answers concise (1-2 paragraphs max) unless explicit technical depth is requested.
 `;
 
