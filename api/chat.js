@@ -55,14 +55,23 @@ export default async function handler(req, res) {
     }
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash"});
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
-    const systemPrompt = `You are Ayush AI, representing candidate Ayush Singh. Answer concise and accurately using this candidate data: ${JSON.stringify(portfolioData)}`;
+    const systemPrompt = `You are Ayush AI, representing candidate Ayush Singh. Answer concisely and accurately using this candidate data: ${JSON.stringify(portfolioData)}`;
     const userMessage = req.body ? req.body.message : "Hello";
 
     const result = await model.generateContent(`${systemPrompt}\n\nQuestion: ${userMessage}`);
     return res.status(200).json({ reply: result.response.text() });
   } catch (error) {
-    return res.status(200).json({ reply: `API Error: ${error.message || 'Error processing request'}` });
+    console.error("API Error:", error);
+    
+    // Catch rate limit (429) specifically and return a friendly recruiter message
+    if (error.status === 429 || (error.message && error.message.includes("429"))) {
+      return res.status(200).json({ 
+        reply: "Ayush AI is receiving high traffic right now! Briefly, Ayush is an AI Engineer specializing in LLMs and Computer Vision with 400+ LeetCode problems solved and a 360-day coding streak. Please try asking again in a few seconds!" 
+      });
+    }
+
+    return res.status(200).json({ reply: "Thanks for reaching out! Ayush's AI assistant is currently updating. Please check out his portfolio buttons or try again in a moment." });
   }
 }
