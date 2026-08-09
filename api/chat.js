@@ -55,7 +55,7 @@ export default async function handler(req, res) {
     }
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash"});
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash"});
 
     const systemPrompt = `You are Ayush AI, representing candidate Ayush Singh. Answer concise and accurately using this candidate data: ${JSON.stringify(portfolioData)}`;
     const userMessage = req.body ? req.body.message : "Hello";
