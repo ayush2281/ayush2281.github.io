@@ -22,13 +22,13 @@ export default async function handler(req, res) {
   }
 
   try {
-    const filePath = join(process.cwd(), 'portfolio_context.json');
-    const portfolioData = JSON.parse(readFileSync(filePath, 'utf8'));
-
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
-      return res.status(500).json({ reply: "API Key missing in environment variables." });
+      return res.status(200).json({ reply: "⚠️ GEMINI_API_KEY environment variable is not set in Vercel." });
     }
+
+    const filePath = join(process.cwd(), 'portfolio_context.json');
+    const portfolioData = JSON.parse(readFileSync(filePath, 'utf8'));
 
     const genAI = new GoogleGenerativeAI(apiKey);
 
@@ -46,8 +46,9 @@ INSTRUCTIONS:
 4. Keep answers concise (1-2 paragraphs max).
 `;
 
+    // Use gemini-1.5-flash for universal compatibility across API versions
     const model = genAI.getGenerativeModel({
-      model: "gemini-2.5-flash",
+      model: "gemini-1.5-flash",
       systemInstruction: systemPrompt
     });
 
@@ -57,7 +58,7 @@ INSTRUCTIONS:
 
     return res.status(200).json({ reply: responseText });
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ reply: "Internal server error processing response." });
+    console.error("Gemini API Error:", error);
+    return res.status(200).json({ reply: `API Error: ${error.message || 'Failed to generate response'}` });
   }
 }
