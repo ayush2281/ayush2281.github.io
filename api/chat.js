@@ -52,7 +52,7 @@ export default async function handler(req, res) {
     const genAI = new GoogleGenerativeAI(apiKey);
     
     // Updated model name for the legacy SDK
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
     const systemPrompt = `You are Ayush AI, representing candidate Ayush Singh. Answer concisely and accurately using this candidate data: ${JSON.stringify(portfolioData)}`;
     const userMessage = req.body ? req.body.message : "Hello";
