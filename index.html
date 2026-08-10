@@ -697,110 +697,108 @@
         </div>
     </div>
 
-    <!-- ZERO-LATENCY LOCAL AI ENGINE WITH TYPEWRITER ANIMATION -->
-    <script>
-        const localKnowledge = [
-            {
-                keywords: ["hire", "why", "recruit", "choose", "reason", "value", "candidate"],
-                answer: "Ayush combines strong computer science fundamentals with remarkable consistency (360-day LeetCode streak, 400+ solved problems) and hands-on experience in LLM post-training and computer vision research, making him ready to deliver value immediately."
-            },
-            {
-                keywords: ["project", "build", "gesture", "calculator", "works", "top"],
-                answer: "His featured project is the Virtual Hand-Gesture Calculator built using Python, OpenCV, and MediaPipe. He has also built 10+ ML models (Credit Card Fraud, Diabetes Prediction, Spam Filter, Movie Recommender) and works on privacy-preserving Edge-AI research."
-            },
-            {
-                keywords: ["leetcode", "streak", "coding", "problem", "codolio", "algo", "dsa"],
-                answer: "Ayush has solved over 400 problems on LeetCode with an uninterrupted 360-day daily coding challenge streak! You can view his detailed coding profiles on Codolio and GitHub."
-            },
-            {
-                keywords: ["ethara", "intern", "job", "role", "work", "experience"],
-                answer: "Ayush is currently an LLM Post-Training Intern at Ethara.ai, supercharging Large Language Models with human-aligned data, dataset curation, RLHF pipelines, and evaluation workflows."
-            },
-            {
-                keywords: ["skill", "strength", "stack", "technology", "python", "c++", "llm"],
-                answer: "His core technical skills include Python, C++, OpenCV, MediaPipe, LLM Post-Training, Prompt Engineering, Data Structures, Machine Learning algorithms, and GCP Cloud Computing."
-            },
-            {
-                keywords: ["weakness", "flaw", "improve", "over-engineer"],
-                answer: "He can occasionally over-engineer technical solutions for extreme edge cases, which he actively manages by setting strict sprint milestone deadlines."
-            },
-            {
-                keywords: ["platform", "outlier", "multimango", "task", "crowdsource"],
-                answer: "Ayush has executed AI task workflows and platform guidelines with high precision on technical platforms like Outlier and Multimango."
-            },
-            {
-                keywords: ["contact", "email", "phone", "reach", "resume", "cv", "location"],
-                answer: "You can reach Ayush via email at ayushsingh2281@gmail.com, call +91 7652087557, or click the 'Download CV' button on his resume section!"
-            }
-        ];
-
-        function toggleChat() {
-            const win = document.getElementById('ai-chat-window');
-            win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none';
+    <!-- ZERO-LATENCY LOCAL AI ENGINE WITH TYPEWRITER ANIMATION & FIXED WORD SPACING -->
+<script>
+    const localKnowledge = [
+        {
+            keywords: ["hire", "why", "recruit", "choose", "reason", "value", "candidate"],
+            answer: "Ayush combines strong computer science fundamentals with remarkable consistency (360-day LeetCode streak, 400+ solved problems) and hands-on experience in LLM post-training and computer vision research, making him ready to deliver value immediately."
+        },
+        {
+            keywords: ["project", "build", "gesture", "calculator", "works", "top"],
+            answer: "His featured project is the Virtual Hand-Gesture Calculator built using Python, OpenCV, and MediaPipe. He has also built 10+ ML models (Credit Card Fraud, Diabetes Prediction, Spam Filter, Movie Recommender) and works on privacy-preserving Edge-AI research."
+        },
+        {
+            keywords: ["leetcode", "streak", "coding", "problem", "codolio", "algo", "dsa"],
+            answer: "Ayush has solved over 400 problems on LeetCode with an uninterrupted 360-day daily coding challenge streak! You can view his detailed coding profiles on Codolio and GitHub."
+        },
+        {
+            keywords: ["ethara", "intern", "job", "role", "work", "experience"],
+            answer: "Ayush is currently an LLM Post-Training Intern at Ethara.ai, supercharging Large Language Models with human-aligned data, dataset curation, RLHF pipelines, and evaluation workflows."
+        },
+        {
+            keywords: ["skill", "strength", "stack", "technology", "python", "c++", "llm"],
+            answer: "His core technical skills include Python, C++, OpenCV, MediaPipe, LLM Post-Training, Prompt Engineering, Data Structures, Machine Learning algorithms, and GCP Cloud Computing."
+        },
+        {
+            keywords: ["weakness", "flaw", "improve", "over-engineer"],
+            answer: "He can occasionally over-engineer technical solutions for extreme edge cases, which he actively manages by setting strict sprint milestone deadlines."
+        },
+        {
+            keywords: ["platform", "outlier", "multimango", "task", "crowdsource"],
+            answer: "Ayush has executed AI task workflows and platform guidelines with high precision on technical platforms like Outlier and Multimango."
+        },
+        {
+            keywords: ["contact", "email", "phone", "reach", "resume", "cv", "location"],
+            answer: "You can reach Ayush via email at ayushsingh2281@gmail.com, call +91 7652087557, or click the 'Download CV' button on his resume section!"
         }
+    ];
 
-        function sendQuickMsg(text) {
-            document.getElementById('chat-input').value = text;
-            sendMessage();
-        }
-
-        function queryEngine(userInput) {
-            const query = userInput.toLowerCase();
-            for (const entry of localKnowledge) {
-                if (entry.keywords.some(kw => query.includes(kw))) {
-                    return entry.answer;
-                }
-            }
-            return "Ayush is an AI Engineer and LLM Post-Training Specialist at Ethara.ai with 400+ LeetCode problems solved and a 360-day coding streak. Try asking about his projects, skills, or why HR should hire him!";
-        }
-
-        // Smooth Typewriter Effect
-        // Typewriter Effect (Slower pace for a 2-3 second typing duration)
-function typeWriterEffect(element, text, speed = 35) {
-    let i = 0;
-    element.innerText = ''; // Clear initial text
-    
-    function type() {
-        if (i < text.length) {
-            element.innerText += text.charAt(i);
-            i++;
-            const msgBox = document.getElementById('chat-messages');
-            msgBox.scrollTop = msgBox.scrollHeight;
-            setTimeout(type, speed);
-        }
+    function toggleChat() {
+        const win = document.getElementById('ai-chat-window');
+        win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none';
     }
-    type();
-}
 
-function sendMessage() {
-    const input = document.getElementById('chat-input');
-    const msgBox = document.getElementById('chat-messages');
-    if (!input.value.trim()) return;
+    function sendQuickMsg(text) {
+        document.getElementById('chat-input').value = text;
+        sendMessage();
+    }
 
-    const userMsg = input.value;
-    
-    // Render User Bubble
-    msgBox.innerHTML += `<div style="display: flex; justify-content: flex-end;"><span style="background: #FFC107; color: #000; font-weight: 600; padding: 8px 12px; border-radius: 12px; max-width: 80%;">${userMsg}</span></div>`;
-    input.value = '';
+    function queryEngine(userInput) {
+        const query = userInput.toLowerCase();
+        for (const entry of localKnowledge) {
+            if (entry.keywords.some(kw => query.includes(kw))) {
+                return entry.answer;
+            }
+        }
+        return "Ayush is an AI Engineer and LLM Post-Training Specialist at Ethara.ai with 400+ LeetCode problems solved and a 360-day coding streak. Try asking about his projects, skills, or why HR should hire him!";
+    }
 
-    // Render Thinking Indicator Bubble
-    const botMsgDiv = document.createElement('div');
-    botMsgDiv.style.display = 'flex';
-    const bubbleSpan = document.createElement('span');
-    bubbleSpan.style.cssText = "background: #1a1a1a; color: #888; padding: 8px 12px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%;";
-    bubbleSpan.innerText = "Thinking...";
-    botMsgDiv.appendChild(bubbleSpan);
-    msgBox.appendChild(botMsgDiv);
-    msgBox.scrollTop = msgBox.scrollHeight;
+    // Typewriter Effect
+    function typeWriterEffect(element, text, speed = 25) {
+        let i = 0;
+        element.textContent = ''; 
+        
+        function type() {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+                const msgBox = document.getElementById('chat-messages');
+                msgBox.scrollTop = msgBox.scrollHeight;
+                setTimeout(type, speed);
+            }
+        }
+        type();
+    }
 
-    const reply = queryEngine(userMsg);
-    
-    // Fixed 1.2s thinking pause + typing animation
-    setTimeout(() => {
-        bubbleSpan.style.color = "#ddd";
-        typeWriterEffect(bubbleSpan, reply, 35); // 35ms per character
-    }, 1200);
-}
+    function sendMessage() {
+        const input = document.getElementById('chat-input');
+        const msgBox = document.getElementById('chat-messages');
+        if (!input.value.trim()) return;
+
+        const userMsg = input.value;
+        
+        // Render User Bubble
+        msgBox.innerHTML += `<div style="display: flex; justify-content: flex-end;"><span style="background: #FFC107; color: #000; font-weight: 600; padding: 8px 12px; border-radius: 12px; max-width: 80%; white-space: pre-wrap; word-break: break-word;">${userMsg}</span></div>`;
+        input.value = '';
+
+        // Render Bot Bubble (with white-space: pre-wrap & word-break: break-word)
+        const botMsgDiv = document.createElement('div');
+        botMsgDiv.style.display = 'flex';
+        const bubbleSpan = document.createElement('span');
+        bubbleSpan.style.cssText = "background: #1a1a1a; color: #888; padding: 10px 14px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%; white-space: pre-wrap; word-break: break-word; overflow-wrap: break-word; line-height: 1.4;";
+        bubbleSpan.innerText = "Thinking...";
+        botMsgDiv.appendChild(bubbleSpan);
+        msgBox.appendChild(botMsgDiv);
+        msgBox.scrollTop = msgBox.scrollHeight;
+
+        const reply = queryEngine(userMsg);
+
+        setTimeout(() => {
+            bubbleSpan.style.color = "#ddd";
+            typeWriterEffect(bubbleSpan, reply, 25);
+        }, 1000);
+    }
     </script>
 </body>
 
