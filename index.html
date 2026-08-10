@@ -23,8 +23,6 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
-
-
     <style>
         /*======================================
 //--//-->   ABOUT
@@ -112,11 +110,9 @@
         }
     </style>
 
-
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
         <div class="container">
@@ -158,7 +154,6 @@
                                 <span id="typing-animation"></span>
 
                                 <script>
-
                                     // Initialize the typing animation
                                     const typingAnimationElement = document.getElementById('typing-animation');
 
@@ -171,30 +166,23 @@
 
                                     // Create a function to display the typing animation for a given text
                                     function playTypingAnimation(text) {
-                                        // Loop through each character and add it to the element
                                         for (let i = 0; i < text.length; i++) {
                                             setTimeout(() => {
                                                 typingAnimationElement.textContent += text[i];
-                                            }, i * 200); // Increase the delay to slow down the typing animation
+                                            }, i * 200);
                                         }
 
-                                        // Once the animation is complete, reset the text and start over
                                         setTimeout(() => {
                                             typingAnimationElement.textContent = '';
                                             playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
                                         }, text.length * 200);
                                     }
 
-                                    // Start the typing animation loop
                                     playTypingAnimation(typingTexts[0]);
-
                                 </script>
 
-                                <br>
-                                <br>
+                                <br><br>
                                 <h2>AI Engineer | LLM Post-Training Specialist</h2>
-                                <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-                                <!-- <br> -->
                                 <p><a href="https://www.linkedin.com/in/ayush2281/"
                                         class="btn btn-primary py-3 px-4">linkedin</a>
                                     <a href="https://github.com/ayush2281"
@@ -210,13 +198,10 @@
         </div>
     </section>
 
-
-
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
         <div class="container">
             <div class="row">
                 <div class="row d-flex align-items-stretch">
-                    <!-- <div class="row d-flex"> -->
                     <div class="col-md-6 col-lg-5 d-flex">
                         <div class="img-about img d-flex align-items-stretch">
                             <div class="overlay">
@@ -226,12 +211,10 @@
                                             <img src="images/Portfolio.png" class="img-fluid rounded b-shadow-a" alt="">
                                         </div>
                                     </div>
-                                    <!-- Details next to profile image -->
                                     <div class="col-sm-6 col-md-7">
                                         <div class="about-info">
                                             <p><span class="title-s">Name: </span> <span>Ayush Singh</span></p>
                                             <p><span class="title-s">Job Role: </span> <span>LLM Post-Training Intern @ Ethara.ai</span></p>
-                                            <!-- <p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p> -->
                                             <p><span class="title-s">Address: </span> <span>Greater Noida, India</span></p>
                                         </div>
                                     </div>
@@ -268,8 +251,6 @@
                                         <div class="progress-bar" role="progressbar" style="width: 90%"
                                             aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-
-
 
                                     <span>C Language</span> <span class="pull-right">80%</span>
                                     <div class="progress">
@@ -324,21 +305,14 @@
                                 <p>Currently at Ethara.ai, I specialize in supercharging LLMs with human-aligned data and building evaluation workflows to meet rigorous industry standards. With a strong foundation in ML principles, data preprocessing, and model implementation, I am committed to applying analytical skills to advance AI technologies.</p>
                                 <ul class="about-info mt-4 px-md-0 px-2">
                                     <li class="d-flex"><span>Profile:</span> <span>AI Engineer | LLM Post-Training Specialist</span></li>
-                                    <!-- <li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI &amp; Digital Marketing</span></li> -->
-                                    <li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering in
-                                            Artificial intelligence</span></li>
+                                    <li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering in Artificial intelligence</span></li>
                                     <li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
-                                    <li class="d-flex"><span>Developer Tools:</span> <span>Git, VS Code, Visual Studio,
-                                            PyCharm, IntelliJ, Eclipse, Jupyter, Collab
-                                        </span></li>
-                                    <li class="d-flex"><span>Other Skills:</span> <span>Data Structures, Algorithm Design, Problem Solving </span></li>
-                                    <li class="d-flex"><span>Interest:</span> <span>Traveling, Camping, Travel
-                                            Photography </span></li>
-
+                                    <li class="d-flex"><span>Developer Tools:</span> <span>Git, VS Code, Visual Studio, PyCharm, Jupyter, Colab</span></li>
+                                    <li class="d-flex"><span>Other Skills:</span> <span>Data Structures, Algorithm Design, Problem Solving</span></li>
+                                    <li class="d-flex"><span>Interest:</span> <span>Traveling, Camping, Travel Photography</span></li>
                                 </ul>
                             </div>
                         </div>
-
 
                         <div class="counter-wrap ftco-animate d-flex mt-md-3">
                             <div class="text">
@@ -356,16 +330,13 @@
         </div>
     </section>
 
-
-
-
     <section class="ftco-section ftco-no-pb" id="resume-section">
         <div class="container">
             <div class="row justify-content-center pb-5">
                 <div class="col-md-10 heading-section text-center ftco-animate">
                     <h1 class="big big-2">Resume</h1>
                     <h2 class="mb-4">Resume</h2>
-                    <p>AI Engineer and LLM Post-Training Intern at Ethara.ai with hands-on experience in human-aligned data pipelines, evaluation workflows, and model refinement. Certified in Generative AI and cloud computing, proficient in Python, data preprocessing, and ML implementation, with a passion for delivering production-grade AI solutions.</p>
+                    <p>AI Engineer and LLM Post-Training Intern at Ethara.ai with hands-on experience in human-aligned data pipelines, evaluation workflows, and model refinement. Certified in Generative AI and cloud computing, proficient in Python, data preprocessing, and ML implementation.</p>
                 </div>
             </div>
 
@@ -375,7 +346,6 @@
             </div>
             <br>
 
-            <!-- Featured: Current Role -->
             <div class="row">
                 <div class="col-md-12">
                     <div class="resume-wrap ftco-animate" style="border-left: 4px solid #ffbd39; padding-left: 1.5rem; background: rgba(255,189,57,0.05);">
@@ -385,9 +355,8 @@
                         <p class="mt-4">Supercharging Large Language Models with human-aligned data to achieve industry-grade performance and reliability.
                         <ul>
                             <li><strong>Focus:</strong> LLM Post-Training &mdash; RLHF, preference data curation, and human-alignment pipelines.</li>
-                            <li><strong>Key Responsibilities:</strong> Developing and optimizing LLM post-training and evaluation workflows; building scalable data pipelines for model refinement; gaining hands-on exposure to AI data processes and industry-standard model refinement techniques.</li>
-                            <li><strong>Skills Demonstrated:</strong> LLM Post-Training, Human-Aligned Data, Dataset Curation, Evaluation Workflows, Prompt Engineering.</li>
-                            <li><strong>Outcome:</strong> Contributing to cutting-edge model quality improvements that align AI outputs with real-world human expectations and safety standards.</li>
+                            <li><strong>Key Responsibilities:</strong> Developing and optimizing LLM post-training and evaluation workflows; building scalable data pipelines.</li>
+                            <li><strong>Skills Demonstrated:</strong> LLM Post-Training, Human-Aligned Data, Dataset Curation, Evaluation Workflows.</li>
                         </ul>
                         </p>
                     </div>
@@ -395,81 +364,38 @@
             </div>
             <br>
 
-
             <div class="row">
-
                 <div class="col-md-6">
                     <div class="resume-wrap ftco-animate">
                         <span class="date">Apr 2025 - Jun 2025</span>
                         <h2>Google Cloud Arcade Participant</h2>
                         <span class="position">Remote</span>
-                        <p class="mt-4">Selected as a program participant to master and apply core cloud concepts.
-                        <ul>
-                            <li>Duration: 3 Months</li>
-                            <li>Role: Participant / Cloud Skills Deep Dive</li>
-                            <li>Skills Demonstrated: Google Cloud Platform (GCP), Computational Resources, Application
-                                Development, Data Management, and AI/ML on Cloud.</li>
-                            <li>Outcome: Gained a deeper, practical understanding of foundational cloud technologies,
-                                preparing for advanced specialization.</li>
-                        </ul>
-                        </p>
+                        <p class="mt-4">Mastered foundational GCP infrastructure, computational resources, and cloud AI/ML tools.</p>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="resume-wrap ftco-animate">
                         <span class="date">May 2024 - Aug 2024</span>
-                        <h2>Girl Script Summer Of Code As Contributer</h2>
+                        <h2>Girl Script Summer Of Code Contributor</h2>
                         <span class="position">Remote</span>
-                        <p class="mt-4">“Machine Learning Contributor at GirlScript Summer of Code”
-                        <ul>
-                            <li>Duration: 3 months</li>
-                            <li>Role: Contributor</li>
-                            <li>Skills Demonstrated:
-                                ML algorithms
-                                Data preprocessing
-                                Model implementation
-                            </li>
-                            <li>Outcome: Enhanced practical understanding and application of machine learning techniques
-                            </li>
-
-                        </ul>
-                        </p>
+                        <p class="mt-4">Contributed ML algorithms, data preprocessing, and model implementations across open-source projects.</p>
                     </div>
                 </div>
-
             </div>
             <br>
 
             <div class="row">
-
                 <div class="col-md-6">
                     <div class="resume-wrap ftco-animate">
                         <span class="date">April 2024 – May 2024</span>
                         <h2>Machine Learning Intern</h2>
-                        <span class="position">Remote</span>
-                        <p class="mt-4">“Intern at TechnoHacks EduTech”
-                        <ul>
-
-                            <li>Duration: 1 Month</li>
-                            <li>Role: Intern</li>
-                            <li>Projects: Initiated and completed 3 impactful machine learning projects</li>
-                            <li>Skills Demonstrated:
-                                ML algorithms
-                                Data preprocessing
-                                Model implementation</li>
-
-                            <li>Outcome: Showcased practical understanding of machine learning and contributed to
-                                innovative solutions</li>
-
-                        </ul>
-                        </p>
+                        <span class="position">TechnoHacks EduTech</span>
+                        <p class="mt-4">Initiated and completed 3 machine learning projects focusing on model deployment and data preprocessing.</p>
                     </div>
                 </div>
-
             </div>
-            <br>
-            <br>
+            <br><br>
 
             <div class="row">
                 <h1 class="big-4">Education</h1>
@@ -481,9 +407,8 @@
                 <div class="col-md-6">
                     <div class="resume-wrap ftco-animate">
                         <span class="date">2023-2027</span>
-                        <h2>Bachelor of Engineering In Artificial intelligence</h2>
-                        <span class="position">Aktu Technical University</span>
-                        <!-- <p class="mt-4">Grade: First class distinction.</p> -->
+                        <h2>Bachelor of Engineering In Artificial Intelligence</h2>
+                        <span class="position">AKTU Technical University</span>
                     </div>
                 </div>
 
@@ -491,8 +416,7 @@
                     <div class="resume-wrap ftco-animate">
                         <span class="date">2021-2022</span>
                         <h2>Higher Secondary School</h2>
-                        <span class="position">Tribhuvan devi Academy</span>
-                        <p class="mt-4">Grade: Second class distinction.</p>
+                        <span class="position">Tribhuvan Devi Academy</span>
                     </div>
                 </div>
             </div>
@@ -506,15 +430,13 @@
         </div>
     </section>
 
-
-
     <section class="ftco-section" id="project-section">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-5">
                 <div class="col-md-7 heading-section text-center ftco-animate">
                     <h1 class="big big-2">Projects</h1>
                     <h2 class="mb-4">Projects</h2>
-                    <p>Built 10+ projects spanning LLM evaluation, machine learning models (diabetic prediction, credit card fraud detection, spam classification, heart disease prediction), and AI-powered recommendation systems. Demonstrated expertise in data preprocessing, ML algorithms, human-aligned data pipelines, and model implementation.</p>
+                    <p>Built 10+ projects spanning LLM evaluation, machine learning models, and computer vision systems.</p>
                 </div>
             </div>
             <div class="row d-flex">
@@ -524,12 +446,8 @@
                             style="background-image: url('images/proj_1.jpg');">
                         </a>
                         <div class="text mt-3 float-right d-block">
-
-                            <h3 class="heading"><a
-                                    href="https://github.com/ayush2281/Machine-learning-Project/blob/main/Project3_Credit_Card_Fraud_Detection.ipynb">Credit
-                                    card fraudment detction using ML</a></h3>
-                            <p>Implemented a machine learning model using Python libraries to accurately detect credit
-                                card fraud, enhancing transaction security.</p>
+                            <h3 class="heading"><a href="https://github.com/ayush2281/Machine-learning-Project">Credit Card Fraud Detection</a></h3>
+                            <p>Implemented an ML model using Python to accurately detect credit card fraud, enhancing transaction security.</p>
                         </div>
                     </div>
                 </div>
@@ -539,82 +457,57 @@
                             style="background-image: url('images/proj_2.jpg');">
                         </a>
                         <div class="text mt-3 float-right d-block">
-
-                            <h3 class="heading"><a
-                                    href="https://github.com/ayush2281/Machine-learning-Project/blob/main/Project1_DiabetesPredection.ipynb">diabetic
-                                    Prediction Using Machine Learning</a></h3>
-                            <p>“Developed a high-accuracy diabetic prediction model using Python’s machine learning
-                                tools, showcasing the power of data-driven healthcare decision-making.”.</p>
+                            <h3 class="heading"><a href="https://github.com/ayush2281/Machine-learning-Project">Diabetes Prediction ML</a></h3>
+                            <p>Developed a high-accuracy diabetes prediction model using Python machine learning libraries.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry">
-                        <a href="https://github.com/ayush2281/Machine-learning-Project/blob/main/project2_Heart_Disease_Prediction.ipynb"
-                            class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+                        <a href="https://github.com/ayush2281/Machine-learning-Project" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
                         </a>
                         <div class="text mt-3 float-right d-block">
-
-                            <h3 class="heading"><a href=""
-                                    https://github.com/ayush2281/Machine-learning-Project/blob/main/project2_Heart_Disease_Prediction.ipynb>Heart
-                                    disease prediction using ml</a></h3>
-                            <p>Developed a machine learning model using Python libraries to predict heart disease,
-                                aiding in early diagnosis and prevention.”.</p>
+                            <h3 class="heading"><a href="https://github.com/ayush2281/Machine-learning-Project">Heart Disease Prediction</a></h3>
+                            <p>Built a predictive diagnostic classification tool to assist in early heart disease detection.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <br>
-            <!-- added justify-content-center to center align the last two projects -->
             <div class="row d-flex justify-content-center">
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry justify-content-end">
-                        <a href="https://github.com/ayush2281/Machine-learning-Project/blob/main/Spam_Mail_Prediction.ipynb"
-                            class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+                        <a href="https://github.com/ayush2281/Machine-learning-Project" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
                         </a>
                         <div class="text mt-3 float-right d-block">
-
-                            <h3 class="heading"><a
-                                    href="https://github.com/ayush2281/Machine-learning-Project/blob/main/Spam_Mail_Prediction.ipynb">Spam
-                                    Mail Prediction Using ML</a></h3>
-                            <p>Developed a machine learning model using Python libraries to classify spam emails,
-                                enhancing email security and filtering.</p>
+                            <h3 class="heading"><a href="https://github.com/ayush2281/Machine-learning-Project">Spam Mail Classification</a></h3>
+                            <p>Engineered an email spam filter using NLP preprocessing and machine learning algorithms.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry justify-content-end">
-                        <a href="https://github.com/ayush2281/Machine-learning-Project/blob/main/Projetct-5%20MovieRecomendationSystem.ipynb"
-                            class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+                        <a href="https://github.com/ayush2281/Machine-learning-Project" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
                         </a>
                         <div class="text mt-3 float-right d-block">
-
-                            <h3 class="heading"><a
-                                    href="https://github.com/ayush2281/Machine-learning-Project/blob/main/Projetct-5%20MovieRecomendationSystem.ipynb">Movie
-                                    Recommendation System using Machine Learning</a></h3>
-                            <p>“Developed a movie recommendation system using Python libraries, leveraging machine
-                                learning to personalize user suggestions.”.</p>
+                            <h3 class="heading"><a href="https://github.com/ayush2281/Machine-learning-Project">Movie Recommendation System</a></h3>
+                            <p>Developed a personalized movie recommendation system using collaborative filtering.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    
             <br>
-            <!-- Ongoing Research -->
             <div class="row d-flex justify-content-center">
                 <div class="col-md-8 d-flex ftco-animate">
                     <div class="blog-entry" style="width:100%; border: 2px dashed #ffbd39; border-radius: 8px; padding: 1.5rem;">
                         <div class="text float-right d-block">
                             <span style="background:#ffbd39; color:#000; padding:2px 10px; border-radius:3px; font-size:12px; font-weight:700;">&#x1F9EA; Ongoing Research</span>
                             <h3 class="heading mt-2"><a href="#">R&amp;D: Secure-Vision Framework (Privacy-Preserving AI)</a></h3>
-                            <p>Engineering a proprietary Edge-AI pipeline for high-precision detection of miniaturized hardware and optical anomalies in unstructured environments. Focused on privacy-preserving inference, on-device model optimization, and real-time anomaly detection without exposing sensitive visual data to external servers.</p>
-                            <p><em>Status: Active Research &mdash; Results to be published.</em></p>
+                            <p>Engineering a proprietary Edge-AI pipeline for high-precision detection in unstructured environments with privacy-preserving on-device inference.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -637,14 +530,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="1000">0</strong>
-                <span>Mentored Students</span>
-              </div>
-            </div>
-          </div> -->
                 <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
                     <div class="block-18">
                         <div class="text">
@@ -657,7 +542,6 @@
         </div>
 
         <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-            <!-- <div class="container"> -->
             <div class="row justify-content-center">
                 <div class="col-md-7 ftco-animate text-center">
                     <h2>More projects on<span> Github </span> </h2>
@@ -668,11 +552,8 @@
                     </div>
                 </div>
             </div>
-            <!-- </div> -->
         </div>
     </section>
-
-
 
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
         <div class="container">
@@ -691,7 +572,7 @@
                             <span class="icon-map-signs"></span>
                         </div>
                         <h3 class="mb-4">Address</h3>
-                        <p>Greater Noida Sector 3 Amrapali society, India</p>
+                        <p>Greater Noida, India</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -700,7 +581,7 @@
                             <span class="icon-phone2"></span>
                         </div>
                         <h3 class="mb-4">Contact Number</h3>
-                        <p><a href="tel://0101010101">+91 7652087557</a></p>
+                        <p><a href="tel://7652087557">+91 7652087557</a></p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -709,7 +590,7 @@
                             <span class="icon-paper-plane"></span>
                         </div>
                         <h3 class="mb-4">Email Address</h3>
-                        <p><a href="/cdn-cgi/l/email-protection#573e393138172e382225243e23327934383a"><span class="__cf_email__" data-cfemail="c9a8b0bcbaa1bda1a8a2bcbbfbfbf1f889aea4a8a0a5e7aaa6a4">[email&#160;protected]</span></a></p>
+                        <p><a href="mailto:ayushsingh2281@gmail.com">ayushsingh2281@gmail.com</a></p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -718,78 +599,41 @@
                             <span class="icon-globe"></span>
                         </div>
                         <h3 class="mb-4">Download Resume</h3>
-                        <p><a
-                                href="https://drive.google.com/file/d/1NIHf30U8RZhhiqmuuZdpe-iGWZeQc7D0/view?usp=sharing">resumelink</a>
-                        </p>
+                        <p><a href="https://drive.google.com/file/d/1NIHf30U8RZhhiqmuuZdpe-iGWZeQc7D0/view?usp=sharing">resumelink</a></p>
                     </div>
                 </div>
 
                 <div class="container">
-                    <br>
-                    <br>
-                    <div class="row justify-content-center">
-                        <div class="col-md-7 ftco-animate text-center">
-                            <!-- <h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2> -->
-                        </div>
-                    </div>
-                    <br>
+                    <br><br>
                     <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
                         <li class="ftco-animate normal-txt">Find me on </li>
-                        <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
-                        <li class="ftco-animate"><a href="https://www.linkedin.com/in/ayush2281/"><span
-                                    class="icon-linkedin"></span></a></li>
-                        <li class="ftco-animate"><a href="https://codolio.com/profile/Ayush2281"><span
-                                    class="icon-briefcase"></span></a></li>
-                        <li class="ftco-animate"><a
-                                href="https://x.com/ayushrajput1366?t=p27jQ4-jNWzOEU8kho2opg&s=09"><span
-                                    class="icon-twitter"></span></a></li>
-                        <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li> -->
-                        <li class="ftco-animate"><a
-                                href="https://www.instagram.com/ayush_rajput1299?igsh=NzN6YXlvcnBtMDJ2"><span
-                                    class="icon-instagram"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.linkedin.com/in/ayush2281/"><span class="icon-linkedin"></span></a></li>
+                        <li class="ftco-animate"><a href="https://codolio.com/profile/Ayush2281"><span class="icon-briefcase"></span></a></li>
+                        <li class="ftco-animate"><a href="https://x.com/ayushrajput1366"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.instagram.com/ayush_rajput1299"><span class="icon-instagram"></span></a></li>
                     </ul>
                     <br>
                 </div>
             </div>
+        </div>
     </section>
-
-
-
 
     <footer class="ftco-footer ftco-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-
-                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;
-                        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template
-                        is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
-                            href="https://colorlib.com" target="_blank">Colorlib</a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </p>
+                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart color-danger" aria-hidden="true"></i> by Ayush Singh</p>
                 </div>
             </div>
         </div>
     </footer>
 
-
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
             <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-                stroke="#F96D00" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
         </svg></div>
 
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -804,7 +648,7 @@
     <script src="js/scrollax.min.js"></script>
     <script src="js/main.js"></script>
 
-    <!-- FAILSAFE: Hide loader even if some assets fail to load -->
+    <!-- FAILSAFE Loader Handler -->
     <script>
         (function() {
             function hideLoader() {
@@ -814,95 +658,129 @@
                     loader.style.display = 'none';
                 }
             }
-            // Try immediately when DOM is ready
-            document.addEventListener('DOMContentLoaded', function() {
-                setTimeout(hideLoader, 800);
-            });
-            // Hard fallback: force-hide after 2.5 seconds no matter what
+            document.addEventListener('DOMContentLoaded', function() { setTimeout(hideLoader, 800); });
             setTimeout(hideLoader, 2500);
-            // Also hide on full load
-            window.addEventListener('load', function() {
-                setTimeout(hideLoader, 300);
-            });
+            window.addEventListener('load', function() { setTimeout(hideLoader, 300); });
         })();
     </script>
 
-</body>
     <!-- Floating AI Chat Button -->
-<div id="ai-chat-btn" onclick="toggleChat()" style="position: fixed; bottom: 25px; right: 25px; background: #FFC107; color: #000; padding: 14px 20px; border-radius: 30px; font-weight: bold; font-family: sans-serif; cursor: pointer; box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4); z-index: 999999; display: flex; align-items: center; gap: 8px;">
-  <span>✨ Ask Ayush AI</span>
-</div>
-
-<!-- Floating AI Chat Window -->
-<div id="ai-chat-window" style="display: none; position: fixed; bottom: 85px; right: 25px; width: 350px; height: 480px; background: #000000; border: 1px solid #333; border-radius: 16px; flex-direction: column; z-index: 999999; color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.8); font-family: sans-serif; overflow: hidden;">
-  
-  <!-- Header -->
-  <div style="background: #111; padding: 14px 16px; font-weight: bold; border-bottom: 1px solid #222; display: flex; justify-content: space-between; align-items: center;">
-    <div style="display: flex; align-items: center; gap: 8px;">
-      <span style="width: 10px; height: 10px; background: #28a745; border-radius: 50%; display: inline-block;"></span>
-      <span style="color: #FFC107;">Ayush AI Assistant</span>
+    <div id="ai-chat-btn" onclick="toggleChat()" style="position: fixed; bottom: 25px; right: 25px; background: #FFC107; color: #000; padding: 14px 20px; border-radius: 30px; font-weight: bold; font-family: sans-serif; cursor: pointer; box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4); z-index: 999999; display: flex; align-items: center; gap: 8px;">
+        <span>✨ Ask Ayush AI</span>
     </div>
-    <span onclick="toggleChat()" style="cursor: pointer; color: #888; font-size: 18px;">✕</span>
-  </div>
 
-  <!-- Messages Container -->
-  <div id="chat-messages" style="flex: 1; padding: 14px; overflow-y: auto; font-size: 13.5px; display: flex; flex-direction: column; gap: 10px;">
-    <div style="background: #1a1a1a; color: #ddd; padding: 10px 14px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%;">
-      Hi! I'm Ayush's AI representative. Ask me anything about his projects, 360-day LeetCode streak, background, or why HR should hire him!
+    <!-- Floating AI Chat Window -->
+    <div id="ai-chat-window" style="display: none; position: fixed; bottom: 85px; right: 25px; width: 350px; height: 480px; background: #000000; border: 1px solid #333; border-radius: 16px; flex-direction: column; z-index: 999999; color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.8); font-family: sans-serif; overflow: hidden;">
+        
+        <!-- Header -->
+        <div style="background: #111; padding: 14px 16px; font-weight: bold; border-bottom: 1px solid #222; display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="width: 10px; height: 10px; background: #28a745; border-radius: 50%; display: inline-block;"></span>
+                <span style="color: #FFC107;">Ayush AI Assistant</span>
+            </div>
+            <span onclick="toggleChat()" style="cursor: pointer; color: #888; font-size: 18px;">✕</span>
+        </div>
+
+        <!-- Messages Container -->
+        <div id="chat-messages" style="flex: 1; padding: 14px; overflow-y: auto; font-size: 13.5px; display: flex; flex-direction: column; gap: 10px;">
+            <div style="background: #1a1a1a; color: #ddd; padding: 10px 14px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%;">
+                Hi! I'm Ayush's AI representative. Ask me anything about his projects, 360-day LeetCode streak, background, or why HR should hire him!
+            </div>
+        </div>
+
+        <!-- Quick Suggestion Pills -->
+        <div style="padding: 6px 12px; display: flex; gap: 6px; overflow-x: auto; background: #0a0a0a; border-top: 1px solid #1f1f1f;">
+            <button onclick="sendQuickMsg('Why should HR hire Ayush?')" style="background: #1e1e1e; color: #FFC107; border: 1px solid #333; border-radius: 12px; padding: 4px 10px; font-size: 11px; cursor: pointer; white-space: nowrap;">Why hire Ayush?</button>
+            <button onclick="sendQuickMsg('What are his top projects?')" style="background: #1e1e1e; color: #FFC107; border: 1px solid #333; border-radius: 12px; padding: 4px 10px; font-size: 11px; cursor: pointer; white-space: nowrap;">Top Projects</button>
+            <button onclick="sendQuickMsg('What is his LeetCode streak?')" style="background: #1e1e1e; color: #FFC107; border: 1px solid #333; border-radius: 12px; padding: 4px 10px; font-size: 11px; cursor: pointer; white-space: nowrap;">LeetCode Streak</button>
+        </div>
+
+        <!-- Input Area -->
+        <div style="padding: 12px; display: flex; gap: 8px; background: #111; border-top: 1px solid #222;">
+            <input type="text" id="chat-input" placeholder="Ask a question..." onkeydown="if(event.key==='Enter') sendMessage()" style="flex: 1; padding: 10px 12px; background: #1a1a1a; border: 1px solid #333; color: #fff; border-radius: 8px; outline: none; font-size: 13px;">
+            <button onclick="sendMessage()" style="background: #FFC107; color: #000; border: none; padding: 10px 14px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 13px;">Send</button>
+        </div>
     </div>
-  </div>
 
-  <!-- Quick Suggestion Pills -->
-  <div style="padding: 6px 12px; display: flex; gap: 6px; overflow-x: auto; background: #0a0a0a; border-top: 1px solid #1f1f1f;">
-    <button onclick="sendQuickMsg('Why should HR hire Ayush?')" style="background: #1e1e1e; color: #FFC107; border: 1px solid #333; border-radius: 12px; padding: 4px 10px; font-size: 11px; cursor: pointer; white-space: nowrap;">Why hire Ayush?</button>
-    <button onclick="sendQuickMsg('What are his top projects?')" style="background: #1e1e1e; color: #FFC107; border: 1px solid #333; border-radius: 12px; padding: 4px 10px; font-size: 11px; cursor: pointer; white-space: nowrap;">Top Projects</button>
-  </div>
+    <!-- ZERO-LATENCY LOCAL AI ENGINE -->
+    <script>
+        const localKnowledge = [
+            {
+                keywords: ["hire", "why", "recruit", "choose", "reason", "value", "candidate"],
+                answer: "Ayush combines strong computer science fundamentals with remarkable consistency (360-day LeetCode streak, 400+ solved problems) and hands-on experience in LLM post-training and computer vision research, making him ready to deliver value immediately."
+            },
+            {
+                keywords: ["project", "build", "gesture", "calculator", "works", "top"],
+                answer: "His featured project is the Virtual Hand-Gesture Calculator built using Python, OpenCV, and MediaPipe. He has also built 10+ ML models (Credit Card Fraud, Diabetes Prediction, Spam Filter, Movie Recommender) and works on privacy-preserving Edge-AI research."
+            },
+            {
+                keywords: ["leetcode", "streak", "coding", "problem", "codolio", "algo", "dsa"],
+                answer: "Ayush has solved over 400 problems on LeetCode with an uninterrupted 360-day daily coding challenge streak! You can view his detailed coding profiles on Codolio and GitHub."
+            },
+            {
+                keywords: ["ethara", "intern", "job", "role", "work", "experience"],
+                answer: "Ayush is currently an LLM Post-Training Intern at Ethara.ai, supercharging Large Language Models with human-aligned data, dataset curation, RLHF pipelines, and evaluation workflows."
+            },
+            {
+                keywords: ["skill", "strength", "stack", "technology", "python", "c++", "llm"],
+                answer: "His core technical skills include Python, C++, OpenCV, MediaPipe, LLM Post-Training, Prompt Engineering, Data Structures, Machine Learning algorithms, and GCP Cloud Computing."
+            },
+            {
+                keywords: ["weakness", "flaw", "improve", "over-engineer"],
+                answer: "He can occasionally over-engineer technical solutions for extreme edge cases, which he actively manages by setting strict sprint milestone deadlines."
+            },
+            {
+                keywords: ["platform", "outlier", "multimango", "task", "crowdsource"],
+                answer: "Ayush has executed AI task workflows and platform guidelines with high precision on technical platforms like Outlier and Multimango."
+            },
+            {
+                keywords: ["contact", "email", "phone", "reach", "resume", "cv", "location"],
+                answer: "You can reach Ayush via email at ayushsingh2281@gmail.com, call +91 7652087557, or click the 'Download CV' button on his resume section!"
+            }
+        ];
 
-  <!-- Input Area -->
-  <div style="padding: 12px; display: flex; gap: 8px; background: #111; border-top: 1px solid #222;">
-    <input type="text" id="chat-input" placeholder="Ask a question..." onkeydown="if(event.key==='Enter') sendMessage()" style="flex: 1; padding: 10px 12px; background: #1a1a1a; border: 1px solid #333; color: #fff; border-radius: 8px; outline: none; font-size: 13px;">
-    <button onclick="sendMessage()" style="background: #FFC107; color: #000; border: none; padding: 10px 14px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 13px;">Send</button>
-  </div>
-</div>
+        function toggleChat() {
+            const win = document.getElementById('ai-chat-window');
+            win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none';
+        }
 
-<script>
-  function toggleChat() {
-    const win = document.getElementById('ai-chat-window');
-    win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none';
-  }
+        function sendQuickMsg(text) {
+            document.getElementById('chat-input').value = text;
+            sendMessage();
+        }
 
-  function sendQuickMsg(text) {
-    document.getElementById('chat-input').value = text;
-    sendMessage();
-  }
+        function queryEngine(userInput) {
+            const query = userInput.toLowerCase();
+            for (const entry of localKnowledge) {
+                if (entry.keywords.some(kw => query.includes(kw))) {
+                    return entry.answer;
+                }
+            }
+            return "Ayush is an AI Engineer and LLM Post-Training Specialist at Ethara.ai with 400+ LeetCode problems solved and a 360-day coding streak. Try asking about his projects, skills, or why HR should hire him!";
+        }
 
-  async function sendMessage() {
-    const input = document.getElementById('chat-input');
-    const msgBox = document.getElementById('chat-messages');
-    if (!input.value.trim()) return;
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const msgBox = document.getElementById('chat-messages');
+            if (!input.value.trim()) return;
 
-    const userMsg = input.value;
-    msgBox.innerHTML += `<div style="display: flex; justify-content: flex-end;"><span style="background: #FFC107; color: #000; font-weight: 600; padding: 8px 12px; border-radius: 12px; max-width: 80%;">${userMsg}</span></div>`;
-    input.value = '';
+            const userMsg = input.value;
+            msgBox.innerHTML += `<div style="display: flex; justify-content: flex-end;"><span style="background: #FFC107; color: #000; font-weight: 600; padding: 8px 12px; border-radius: 12px; max-width: 80%;">${userMsg}</span></div>`;
+            input.value = '';
 
-    const botMsgDiv = document.createElement('div');
-    botMsgDiv.style.display = 'flex';
-    botMsgDiv.innerHTML = `<span style="background: #1a1a1a; color: #888; padding: 8px 12px; border-radius: 12px; border: 1px solid #2a2a2a;">Thinking...</span>`;
-    msgBox.appendChild(botMsgDiv);
-    msgBox.scrollTop = msgBox.scrollHeight;
+            const botMsgDiv = document.createElement('div');
+            botMsgDiv.style.display = 'flex';
+            botMsgDiv.innerHTML = `<span style="background: #1a1a1a; color: #888; padding: 8px 12px; border-radius: 12px; border: 1px solid #2a2a2a;">Thinking...</span>`;
+            msgBox.appendChild(botMsgDiv);
+            msgBox.scrollTop = msgBox.scrollHeight;
 
-    try {
-      const res = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: userMsg })
-      });
-      const data = await res.json();
-      botMsgDiv.innerHTML = `<span style="background: #1a1a1a; color: #ddd; padding: 8px 12px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%;">${data.reply}</span>`;
-    } catch (e) {
-      botMsgDiv.innerHTML = `<span style="background: #1a1a1a; color: #ff5555; padding: 8px 12px; border-radius: 12px; border: 1px solid #2a2a2a;">Unable to connect to AI server.</span>`;
-    }
-    msgBox.scrollTop = msgBox.scrollHeight;
-  }
-</script>
+            setTimeout(() => {
+                const reply = queryEngine(userMsg);
+                botMsgDiv.innerHTML = `<span style="background: #1a1a1a; color: #ddd; padding: 8px 12px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%;">${reply}</span>`;
+                msgBox.scrollTop = msgBox.scrollHeight;
+            }, 180);
+        }
+    </script>
+</body>
+
 </html>
