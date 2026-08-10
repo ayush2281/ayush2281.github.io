@@ -43,7 +43,6 @@
 
 
         .skill-mf .progress {
-            /* background-color: #cde1f8; */
             margin: .5rem 0 1.2rem 0;
             border-radius: 0;
             height: .7rem;
@@ -68,7 +67,6 @@
 
         #typing-animation:before {
             content: "";
-            /* position: absolute; */
             top: 0;
             left: 0;
             width: 0;
@@ -134,7 +132,7 @@
         </div>
     </nav>
     <section id="home-section" class="hero">
-        <div class="home-slider  owl-carousel">
+        <div class="home-slider owl-carousel">
             <div class="slider-item ">
                 <div class="overlay"></div>
                 <div class="container">
@@ -144,7 +142,7 @@
                             style="background-image:url(images/bg_1.png);">
                             <div class="overlay"></div>
                         </div>
-                        <div class="one-forth d-flex  align-items-center ftco-animate"
+                        <div class="one-forth d-flex align-items-center ftco-animate"
                             data-scrollax=" properties: { translateY: '70%' }">
                             <div class="text">
                                 <span class="subheading">Hii!</span>
@@ -154,17 +152,14 @@
                                 <span id="typing-animation"></span>
 
                                 <script>
-                                    // Initialize the typing animation
                                     const typingAnimationElement = document.getElementById('typing-animation');
 
-                                    // Create an array of typing text
                                     const typingTexts = [
                                         'AI Engineer  ',
                                         'LLM Specialist  ',
                                         'Post-Training Expert  ',
                                     ];
 
-                                    // Create a function to display the typing animation for a given text
                                     function playTypingAnimation(text) {
                                         for (let i = 0; i < text.length; i++) {
                                             setTimeout(() => {
@@ -702,7 +697,7 @@
         </div>
     </div>
 
-    <!-- ZERO-LATENCY LOCAL AI ENGINE -->
+    <!-- ZERO-LATENCY LOCAL AI ENGINE WITH TYPEWRITER ANIMATION -->
     <script>
         const localKnowledge = [
             {
@@ -759,26 +754,53 @@
             return "Ayush is an AI Engineer and LLM Post-Training Specialist at Ethara.ai with 400+ LeetCode problems solved and a 360-day coding streak. Try asking about his projects, skills, or why HR should hire him!";
         }
 
+        // Smooth Typewriter Effect
+        function typeWriterEffect(element, text, speed = 12) {
+            let i = 0;
+            element.innerText = ''; // Clear initial text
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerText += text.charAt(i);
+                    i++;
+                    const msgBox = document.getElementById('chat-messages');
+                    msgBox.scrollTop = msgBox.scrollHeight;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
         function sendMessage() {
             const input = document.getElementById('chat-input');
             const msgBox = document.getElementById('chat-messages');
             if (!input.value.trim()) return;
 
             const userMsg = input.value;
+            
+            // Render User Bubble
             msgBox.innerHTML += `<div style="display: flex; justify-content: flex-end;"><span style="background: #FFC107; color: #000; font-weight: 600; padding: 8px 12px; border-radius: 12px; max-width: 80%;">${userMsg}</span></div>`;
             input.value = '';
 
+            // Render Thinking Indicator Bubble
             const botMsgDiv = document.createElement('div');
             botMsgDiv.style.display = 'flex';
-            botMsgDiv.innerHTML = `<span style="background: #1a1a1a; color: #888; padding: 8px 12px; border-radius: 12px; border: 1px solid #2a2a2a;">Thinking...</span>`;
+            const bubbleSpan = document.createElement('span');
+            bubbleSpan.style.cssText = "background: #1a1a1a; color: #888; padding: 8px 12px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%;";
+            bubbleSpan.innerText = "Thinking...";
+            botMsgDiv.appendChild(bubbleSpan);
             msgBox.appendChild(botMsgDiv);
             msgBox.scrollTop = msgBox.scrollHeight;
 
+            const reply = queryEngine(userMsg);
+            
+            // Scale thinking delay slightly based on response length (200ms to 450ms)
+            const thinkingDelay = Math.min(200 + (reply.length * 0.5), 450);
+
             setTimeout(() => {
-                const reply = queryEngine(userMsg);
-                botMsgDiv.innerHTML = `<span style="background: #1a1a1a; color: #ddd; padding: 8px 12px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%;">${reply}</span>`;
-                msgBox.scrollTop = msgBox.scrollHeight;
-            }, 180);
+                bubbleSpan.style.color = "#ddd";
+                typeWriterEffect(bubbleSpan, reply, 12);
+            }, thinkingDelay);
         }
     </script>
 </body>
