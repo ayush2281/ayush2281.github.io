@@ -755,53 +755,52 @@
         }
 
         // Smooth Typewriter Effect
-        function typeWriterEffect(element, text, speed = 12) {
-            let i = 0;
-            element.innerText = ''; // Clear initial text
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerText += text.charAt(i);
-                    i++;
-                    const msgBox = document.getElementById('chat-messages');
-                    msgBox.scrollTop = msgBox.scrollHeight;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        function sendMessage() {
-            const input = document.getElementById('chat-input');
+        // Typewriter Effect (Slower pace for a 2-3 second typing duration)
+function typeWriterEffect(element, text, speed = 35) {
+    let i = 0;
+    element.innerText = ''; // Clear initial text
+    
+    function type() {
+        if (i < text.length) {
+            element.innerText += text.charAt(i);
+            i++;
             const msgBox = document.getElementById('chat-messages');
-            if (!input.value.trim()) return;
-
-            const userMsg = input.value;
-            
-            // Render User Bubble
-            msgBox.innerHTML += `<div style="display: flex; justify-content: flex-end;"><span style="background: #FFC107; color: #000; font-weight: 600; padding: 8px 12px; border-radius: 12px; max-width: 80%;">${userMsg}</span></div>`;
-            input.value = '';
-
-            // Render Thinking Indicator Bubble
-            const botMsgDiv = document.createElement('div');
-            botMsgDiv.style.display = 'flex';
-            const bubbleSpan = document.createElement('span');
-            bubbleSpan.style.cssText = "background: #1a1a1a; color: #888; padding: 8px 12px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%;";
-            bubbleSpan.innerText = "Thinking...";
-            botMsgDiv.appendChild(bubbleSpan);
-            msgBox.appendChild(botMsgDiv);
             msgBox.scrollTop = msgBox.scrollHeight;
-
-            const reply = queryEngine(userMsg);
-            
-            // Scale thinking delay slightly based on response length (200ms to 450ms)
-            const thinkingDelay = Math.min(200 + (reply.length * 0.5), 450);
-
-            setTimeout(() => {
-                bubbleSpan.style.color = "#ddd";
-                typeWriterEffect(bubbleSpan, reply, 12);
-            }, thinkingDelay);
+            setTimeout(type, speed);
         }
+    }
+    type();
+}
+
+function sendMessage() {
+    const input = document.getElementById('chat-input');
+    const msgBox = document.getElementById('chat-messages');
+    if (!input.value.trim()) return;
+
+    const userMsg = input.value;
+    
+    // Render User Bubble
+    msgBox.innerHTML += `<div style="display: flex; justify-content: flex-end;"><span style="background: #FFC107; color: #000; font-weight: 600; padding: 8px 12px; border-radius: 12px; max-width: 80%;">${userMsg}</span></div>`;
+    input.value = '';
+
+    // Render Thinking Indicator Bubble
+    const botMsgDiv = document.createElement('div');
+    botMsgDiv.style.display = 'flex';
+    const bubbleSpan = document.createElement('span');
+    bubbleSpan.style.cssText = "background: #1a1a1a; color: #888; padding: 8px 12px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%;";
+    bubbleSpan.innerText = "Thinking...";
+    botMsgDiv.appendChild(bubbleSpan);
+    msgBox.appendChild(botMsgDiv);
+    msgBox.scrollTop = msgBox.scrollHeight;
+
+    const reply = queryEngine(userMsg);
+    
+    // Fixed 1.2s thinking pause + typing animation
+    setTimeout(() => {
+        bubbleSpan.style.color = "#ddd";
+        typeWriterEffect(bubbleSpan, reply, 35); // 35ms per character
+    }, 1200);
+}
     </script>
 </body>
 
