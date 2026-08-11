@@ -24,10 +24,6 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        /*======================================
-//--//-->   ABOUT
-======================================*/
-
         .about-mf .box-shadow-full {
             padding-top: 4rem;
             padding-bottom: 4rem;
@@ -41,7 +37,6 @@
             margin-left: 10px;
         }
 
-
         .skill-mf .progress {
             margin: .5rem 0 1.2rem 0;
             border-radius: 0;
@@ -53,8 +48,6 @@
             background-color: #ffbd39;
         }
 
-
-        /* Animation styles */
         #typing-animation {
             position: relative;
             font-size: 30px;
@@ -76,27 +69,14 @@
         }
 
         @keyframes typing {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 100%;
-            }
+            from { width: 0; }
+            to { width: 100%; }
         }
 
         @keyframes typing-cursor {
-            from {
-                width: 5px;
-            }
-
-            to {
-                width: 0;
-            }
+            from { width: 5px; }
+            to { width: 0; }
         }
-
-
-        /* project image zoom effect */
 
         .zoom-effect {
             overflow: hidden;
@@ -107,7 +87,6 @@
             transform: scale(1.1);
         }
     </style>
-
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -131,29 +110,24 @@
             </div>
         </div>
     </nav>
+
     <section id="home-section" class="hero">
         <div class="home-slider owl-carousel">
-            <div class="slider-item ">
+            <div class="slider-item">
                 <div class="overlay"></div>
                 <div class="container">
-                    <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
-                        data-scrollax-parent="true">
-                        <div class="one-third js-fullheight order-md-last img"
-                            style="background-image:url(images/bg_1.png);">
+                    <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
                             <div class="overlay"></div>
                         </div>
-                        <div class="one-forth d-flex align-items-center ftco-animate"
-                            data-scrollax=" properties: { translateY: '70%' }">
+                        <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
                             <div class="text">
                                 <span class="subheading">Hii!</span>
                                 <h1 class="mb-4 mt-3">I'm <span>Ayush Singh</span></h1>
-
-                                <!-- Element to contain animated typing -->
                                 <span id="typing-animation"></span>
 
                                 <script>
                                     const typingAnimationElement = document.getElementById('typing-animation');
-
                                     const typingTexts = [
                                         'AI Engineer  ',
                                         'LLM Specialist  ',
@@ -178,12 +152,10 @@
 
                                 <br><br>
                                 <h2>AI Engineer | LLM Post-Training Specialist</h2>
-                                <p><a href="https://www.linkedin.com/in/ayush2281/"
-                                        class="btn btn-primary py-3 px-4">linkedin</a>
-                                    <a href="https://github.com/ayush2281"
-                                        class="btn btn-white btn-outline-white py-3 px-4">My works</a>
-                                    <a href="https://codolio.com/profile/Ayush2281"
-                                        class="btn btn-white btn-outline-white py-3 px-4">Codolio</a>
+                                <p>
+                                    <a href="https://linkedin.com/in/ayush2281/" target="_blank" class="btn btn-primary py-3 px-4">LinkedIn</a>
+                                    <a href="https://github.com/ayush2281" target="_blank" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a>
+                                    <a href="https://codolio.com/profile/Ayush2281" target="_blank" class="btn btn-white btn-outline-white py-3 px-4">Codolio</a>
                                 </p>
                             </div>
                         </div>
@@ -210,6 +182,7 @@
                                         <div class="about-info">
                                             <p><span class="title-s">Name: </span> <span>Ayush Singh</span></p>
                                             <p><span class="title-s">Job Role: </span> <span>LLM Post-Training Intern @ Ethara.ai</span></p>
+                                            <p><span class="title-s">College: </span> <span>Mangalmay Institute of Engineering &amp; Tech</span></p>
                                             <p><span class="title-s">Address: </span> <span>Greater Noida, India</span></p>
                                         </div>
                                     </div>
@@ -217,74 +190,17 @@
 
                                 <div class="skill-mf">
                                     <p class="title-s">Skills</p>
+                                    <span>LLM Post-Training &amp; RLHF</span> <span class="pull-right">90%</span>
+                                    <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
 
-                                    <span>LLM Post-Training</span> <span class="pull-right">85%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 85%"
-                                            aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+                                    <span>PyTorch &amp; OpenCV</span> <span class="pull-right">88%</span>
+                                    <div class="progress"><div class="progress-bar" style="width: 88%"></div></div>
 
-                                    <span>Prompt Engineering</span> <span class="pull-right">88%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 88%"
-                                            aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+                                    <span>Python &amp; C++</span> <span class="pull-right">92%</span>
+                                    <div class="progress"><div class="progress-bar" style="width: 92%"></div></div>
 
-                                    <span>PYTHON</span> <span class="pull-right">90%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 85%"
-                                            aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-
-                                    <span>Machine Learning</span> <span class="pull-right">85%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 95%;"
-                                            aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span>Predictive modeling </span> <span class="pull-right">85%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 90%"
-                                            aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-
-                                    <span>C Language</span> <span class="pull-right">80%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 85%"
-                                            aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span>C++ </span> <span class="pull-right">85%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 85%"
-                                            aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-
-                                    <p class="title-s" style="margin-top:1rem; color:#ffbd39;">Generative AI &amp; LLMs</p>
-                                    <span>LLM Post-Training</span> <span class="pull-right">88%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 88%"
-                                            aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span>Human-Aligned Data</span> <span class="pull-right">85%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 85%"
-                                            aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span>Evaluation Workflows</span> <span class="pull-right">82%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 82%"
-                                            aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span>Prompt Engineering</span> <span class="pull-right">85%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 85%"
-                                            aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p class="title-s" style="margin-top:1rem;">Cloud &amp; Tools</p>
-                                    <span>Cloud Computing</span> <span class="pull-right">60%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 80%"
-                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+                                    <span>Data Structures &amp; Algorithms (760+ Solved)</span> <span class="pull-right">95%</span>
+                                    <div class="progress"><div class="progress-bar" style="width: 95%"></div></div>
                                 </div>
                             </div>
                         </div>
@@ -293,18 +209,15 @@
                     <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
                         <div class="row justify-content-start pb-3">
                             <div class="col-md-12 heading-section ftco-animate">
-
                                 <h1 class="big">About</h1>
                                 <h2 class="mb-4">About Me</h2>
-
-                                <p>Currently at Ethara.ai, I specialize in supercharging LLMs with human-aligned data and building evaluation workflows to meet rigorous industry standards. With a strong foundation in ML principles, data preprocessing, and model implementation, I am committed to applying analytical skills to advance AI technologies.</p>
+                                <p>LLM Post-Training Intern at Ethara.ai and GSoC 2025 contributor to Brain-Globe. Specializing in RLHF, preference data annotation, computer vision, and building high-performance AI workflows with 760+ solved DSA problems.</p>
                                 <ul class="about-info mt-4 px-md-0 px-2">
                                     <li class="d-flex"><span>Profile:</span> <span>AI Engineer | LLM Post-Training Specialist</span></li>
-                                    <li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering in Artificial intelligence</span></li>
-                                    <li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
-                                    <li class="d-flex"><span>Developer Tools:</span> <span>Git, VS Code, Visual Studio, PyCharm, Jupyter, Colab</span></li>
-                                    <li class="d-flex"><span>Other Skills:</span> <span>Data Structures, Algorithm Design, Problem Solving</span></li>
-                                    <li class="d-flex"><span>Interest:</span> <span>Traveling, Camping, Travel Photography</span></li>
+                                    <li class="d-flex"><span>Education:</span> <span>B.Tech in CSE (Artificial Intelligence), Mangalmay Institute</span></li>
+                                    <li class="d-flex"><span>Email:</span> <span>ayushthakur2281@gmail.com</span></li>
+                                    <li class="d-flex"><span>Phone:</span> <span>+91 7652087557</span></li>
+                                    <li class="d-flex"><span>Handles:</span> <span><a href="https://github.com/ayush2281" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/ayush2281/" target="_blank">LinkedIn</a> | <a href="https://codolio.com/profile/Ayush2281" target="_blank">Codolio</a></span></li>
                                 </ul>
                             </div>
                         </div>
@@ -312,11 +225,10 @@
                         <div class="counter-wrap ftco-animate d-flex mt-md-3">
                             <div class="text">
                                 <p class="mb-4">
-                                    <span class="number" data-number="10">0</span><span>+</span>
-                                    <span>&nbsp; Projects completed</span>
+                                    <span class="number" data-number="760">0</span><span>+</span>
+                                    <span>&nbsp; DSA Problems Solved</span>
                                 </p>
-                                <p><a href="https://github.com/ayush2281?tab=repositories"
-                                        class="btn btn-primary py-3 px-3">GITHUB</a></p>
+                                <p><a href="https://github.com/ayush2281" target="_blank" class="btn btn-primary py-3 px-3">GITHUB</a></p>
                             </div>
                         </div>
                     </div>
@@ -331,7 +243,7 @@
                 <div class="col-md-10 heading-section text-center ftco-animate">
                     <h1 class="big big-2">Resume</h1>
                     <h2 class="mb-4">Resume</h2>
-                    <p>AI Engineer and LLM Post-Training Intern at Ethara.ai with hands-on experience in human-aligned data pipelines, evaluation workflows, and model refinement. Certified in Generative AI and cloud computing, proficient in Python, data preprocessing, and ML implementation.</p>
+                    <p>AI Engineer with hands-on experience in LLM post-training workflows, open-source neuroscience tools (Brain-Globe PR #519), GCP cloud solutions, and international computer vision research publications.</p>
                 </div>
             </div>
 
@@ -344,14 +256,13 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="resume-wrap ftco-animate" style="border-left: 4px solid #ffbd39; padding-left: 1.5rem; background: rgba(255,189,57,0.05);">
-                        <span class="date" style="background:#ffbd39; color:#000; padding:3px 12px; border-radius:3px; font-weight:700; font-size:13px;">2025 &ndash; Present &nbsp;&#x1F525; Current Role</span>
+                        <span class="date" style="background:#ffbd39; color:#000; padding:3px 12px; border-radius:3px; font-weight:700; font-size:13px;">Feb 2026 &ndash; May 2026 &nbsp;&#x1F525; Current Role</span>
                         <h2 style="margin-top:0.75rem;">LLM Post-Training Intern</h2>
-                        <span class="position">Ethara.ai &nbsp;|&nbsp; Remote</span>
+                        <span class="position">Ethara.ai &nbsp;|&nbsp; Gurugram / Remote</span>
                         <p class="mt-4">Supercharging Large Language Models with human-aligned data to achieve industry-grade performance and reliability.
                         <ul>
-                            <li><strong>Focus:</strong> LLM Post-Training &mdash; RLHF, preference data curation, and human-alignment pipelines.</li>
-                            <li><strong>Key Responsibilities:</strong> Developing and optimizing LLM post-training and evaluation workflows; building scalable data pipelines.</li>
-                            <li><strong>Skills Demonstrated:</strong> LLM Post-Training, Human-Aligned Data, Dataset Curation, Evaluation Workflows.</li>
+                            <li>Developing and optimizing LLM post-training and evaluation workflows.</li>
+                            <li>Building scalable dataset curation pipelines for model refinement, RLHF, and preference data annotation.</li>
                         </ul>
                         </p>
                     </div>
@@ -362,31 +273,19 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="resume-wrap ftco-animate">
-                        <span class="date">Apr 2025 - Jun 2025</span>
-                        <h2>Google Cloud Arcade Participant</h2>
-                        <span class="position">Remote</span>
-                        <p class="mt-4">Mastered foundational GCP infrastructure, computational resources, and cloud AI/ML tools.</p>
+                        <span class="date">Apr 2025 &ndash; Present</span>
+                        <h2>Open Source Contributor</h2>
+                        <span class="position">Brain-Globe &nbsp;|&nbsp; Remote (GSoC 2025)</span>
+                        <p class="mt-4">Contributed to <code>cell-finder</code> in the Brain Globe open-source neuroscience suite. Authored accepted PR #519 resolving a critical PyTorch dependency issue.</p>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="resume-wrap ftco-animate">
-                        <span class="date">May 2024 - Aug 2024</span>
-                        <h2>Girl Script Summer Of Code Contributor</h2>
+                        <span class="date">Apr 2025 &ndash; Jun 2025</span>
+                        <h2>Google Cloud Arcade Facilitator</h2>
                         <span class="position">Remote</span>
-                        <p class="mt-4">Contributed ML algorithms, data preprocessing, and model implementations across open-source projects.</p>
-                    </div>
-                </div>
-            </div>
-            <br>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="resume-wrap ftco-animate">
-                        <span class="date">April 2024 – May 2024</span>
-                        <h2>Machine Learning Intern</h2>
-                        <span class="position">TechnoHacks EduTech</span>
-                        <p class="mt-4">Initiated and completed 3 machine learning projects focusing on model deployment and data preprocessing.</p>
+                        <p class="mt-4">Achieved <strong>Legend Milestone status</strong> by deploying and managing compute, storage, and cloud AI/ML solutions on GCP.</p>
                     </div>
                 </div>
             </div>
@@ -401,25 +300,24 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="resume-wrap ftco-animate">
-                        <span class="date">2023-2027</span>
-                        <h2>Bachelor of Engineering In Artificial Intelligence</h2>
-                        <span class="position">AKTU Technical University</span>
+                        <span class="date">2023 &ndash; 2027</span>
+                        <h2>B.Tech in Computer Science &amp; Engineering (AI)</h2>
+                        <span class="position">Mangalmay Institute of Engineering and Technology, Greater Noida</span>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="resume-wrap ftco-animate">
-                        <span class="date">2021-2022</span>
-                        <h2>Higher Secondary School</h2>
-                        <span class="position">Tribhuvan Devi Academy</span>
+                        <span class="date">2020 &ndash; 2022</span>
+                        <h2>Senior Secondary School</h2>
+                        <span class="position">Tribhuvan Devi Academy, Sultanpur UP</span>
                     </div>
                 </div>
             </div>
 
             <div class="row justify-content-center mt-5">
                 <div class="col-md-6 text-center ftco-animate">
-                    <p><a href="https://drive.google.com/file/d/1NIHf30U8RZhhiqmuuZdpe-iGWZeQc7D0/view?usp=sharing"
-                            class="btn btn-primary py-4 px-5">Download CV</a></p>
+                    <p><a href="mailto:ayushthakur2281@gmail.com" class="btn btn-primary py-4 px-5">Contact Directly</a></p>
                 </div>
             </div>
         </div>
@@ -431,119 +329,35 @@
                 <div class="col-md-7 heading-section text-center ftco-animate">
                     <h1 class="big big-2">Projects</h1>
                     <h2 class="mb-4">Projects</h2>
-                    <p>Built 10+ projects spanning LLM evaluation, machine learning models, and computer vision systems.</p>
+                    <p>Featured publications and machine learning systems built using PyTorch, OpenCV, Scikit-Learn, and Generative APIs.</p>
                 </div>
             </div>
             <div class="row d-flex">
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry justify-content-end">
-                        <a href="https://github.com/ayush2281/Machine-learning-Project" class="block-20 zoom-effect"
-                            style="background-image: url('images/proj_1.jpg');">
-                        </a>
+                        <a href="https://github.com/ayush2281" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');"></a>
                         <div class="text mt-3 float-right d-block">
-                            <h3 class="heading"><a href="https://github.com/ayush2281/Machine-learning-Project">Credit Card Fraud Detection</a></h3>
-                            <p>Implemented an ML model using Python to accurately detect credit card fraud, enhancing transaction security.</p>
+                            <h3 class="heading"><a href="#">Virtual Hand-Gesture Calculator (Springer Publication)</a></h3>
+                            <p>Presented at ICMCE-2026 and accepted as a Springer book chapter. Real-time gesture tracking using OpenCV, MediaPipe, and Gemini API.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry justify-content-end">
-                        <a href="https://github.com/ayush2281/Machine-learning-Project" class="block-20 zoom-effect"
-                            style="background-image: url('images/proj_2.jpg');">
-                        </a>
+                        <a href="https://github.com/ayush2281" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');"></a>
                         <div class="text mt-3 float-right d-block">
-                            <h3 class="heading"><a href="https://github.com/ayush2281/Machine-learning-Project">Diabetes Prediction ML</a></h3>
-                            <p>Developed a high-accuracy diabetes prediction model using Python machine learning libraries.</p>
+                            <h3 class="heading"><a href="#">Diabetes Prediction | Python/ML</a></h3>
+                            <p>Trained an SVM classifier to predict diabetic status with 88% accuracy using StandardScaler normalization and custom real-time input pipelines.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry">
-                        <a href="https://github.com/ayush2281/Machine-learning-Project" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
-                        </a>
+                        <a href="https://github.com/ayush2281" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a>
                         <div class="text mt-3 float-right d-block">
-                            <h3 class="heading"><a href="https://github.com/ayush2281/Machine-learning-Project">Heart Disease Prediction</a></h3>
-                            <p>Built a predictive diagnostic classification tool to assist in early heart disease detection.</p>
+                            <h3 class="heading"><a href="#">Heart Disease Prediction | Python/ML</a></h3>
+                            <p>Developed a Logistic Regression model classifying cardiac risk with 85% accuracy using stratified splits to prevent pipeline data leakage.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry justify-content-end">
-                        <a href="https://github.com/ayush2281/Machine-learning-Project" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-                        </a>
-                        <div class="text mt-3 float-right d-block">
-                            <h3 class="heading"><a href="https://github.com/ayush2281/Machine-learning-Project">Spam Mail Classification</a></h3>
-                            <p>Engineered an email spam filter using NLP preprocessing and machine learning algorithms.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry justify-content-end">
-                        <a href="https://github.com/ayush2281/Machine-learning-Project" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
-                        </a>
-                        <div class="text mt-3 float-right d-block">
-                            <h3 class="heading"><a href="https://github.com/ayush2281/Machine-learning-Project">Movie Recommendation System</a></h3>
-                            <p>Developed a personalized movie recommendation system using collaborative filtering.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-8 d-flex ftco-animate">
-                    <div class="blog-entry" style="width:100%; border: 2px dashed #ffbd39; border-radius: 8px; padding: 1.5rem;">
-                        <div class="text float-right d-block">
-                            <span style="background:#ffbd39; color:#000; padding:2px 10px; border-radius:3px; font-size:12px; font-weight:700;">&#x1F9EA; Ongoing Research</span>
-                            <h3 class="heading mt-2"><a href="#">R&amp;D: Secure-Vision Framework (Privacy-Preserving AI)</a></h3>
-                            <p>Engineering a proprietary Edge-AI pipeline for high-precision detection in unstructured environments with privacy-preserving on-device inference.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-        <div class="container">
-            <div class="row d-md-flex align-items-center">
-                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-                    <div class="block-18">
-                        <div class="text">
-                            <strong class="number" data-number="2">0</strong>
-                            <span>hackathon</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-                    <div class="block-18">
-                        <div class="text">
-                            <strong class="number" data-number="10">0</strong>
-                            <span>Projects</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-                    <div class="block-18">
-                        <div class="text">
-                            <strong class="number" data-number="500">0</strong>
-                            <span>Cups of coffee</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-            <div class="row justify-content-center">
-                <div class="col-md-7 ftco-animate text-center">
-                    <h2>More projects on<span> Github </span> </h2>
-                    <div class="heading">
-                        <h4>I love to build LLM pipelines, train smarter models, and uncover hidden data stories</h4>
-                        <br>
-                        <p><a href="https://github.com/ayush2281" class="btn btn-primary py-3 px-5">GitHub</a></p>
                     </div>
                 </div>
             </div>
@@ -556,45 +370,37 @@
                 <div class="col-md-7 heading-section text-center ftco-animate">
                     <h1 class="big big-2">Contact</h1>
                     <h2 class="mb-4">Contact Me</h2>
-                    <p>Below are the details to reach out to me!</p>
+                    <p>Feel free to reach out via phone, email, or social profiles!</p>
                 </div>
             </div>
 
             <div class="row d-flex contact-info mb-5">
                 <div class="col-md-6 col-lg-3 d-flex ftco-animate">
                     <div class="align-self-stretch box p-4 text-center">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="icon-map-signs"></span>
-                        </div>
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="icon-map-signs"></span></div>
                         <h3 class="mb-4">Address</h3>
                         <p>Greater Noida, India</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex ftco-animate">
                     <div class="align-self-stretch box p-4 text-center">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="icon-phone2"></span>
-                        </div>
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="icon-phone2"></span></div>
                         <h3 class="mb-4">Contact Number</h3>
                         <p><a href="tel://7652087557">+91 7652087557</a></p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex ftco-animate">
                     <div class="align-self-stretch box p-4 text-center">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="icon-paper-plane"></span>
-                        </div>
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="icon-paper-plane"></span></div>
                         <h3 class="mb-4">Email Address</h3>
-                        <p><a href="mailto:ayushsingh2281@gmail.com">ayushsingh2281@gmail.com</a></p>
+                        <p><a href="mailto:ayushthakur2281@gmail.com">ayushthakur2281@gmail.com</a></p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex ftco-animate">
                     <div class="align-self-stretch box p-4 text-center">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="icon-globe"></span>
-                        </div>
-                        <h3 class="mb-4">Download Resume</h3>
-                        <p><a href="https://drive.google.com/file/d/1NIHf30U8RZhhiqmuuZdpe-iGWZeQc7D0/view?usp=sharing">resumelink</a></p>
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="icon-globe"></span></div>
+                        <h3 class="mb-4">Coding Profiles</h3>
+                        <p><a href="https://codolio.com/profile/Ayush2281" target="_blank">Codolio Profile</a></p>
                     </div>
                 </div>
 
@@ -602,10 +408,9 @@
                     <br><br>
                     <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
                         <li class="ftco-animate normal-txt">Find me on </li>
-                        <li class="ftco-animate"><a href="https://www.linkedin.com/in/ayush2281/"><span class="icon-linkedin"></span></a></li>
-                        <li class="ftco-animate"><a href="https://codolio.com/profile/Ayush2281"><span class="icon-briefcase"></span></a></li>
-                        <li class="ftco-animate"><a href="https://x.com/ayushrajput1366"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="https://www.instagram.com/ayush_rajput1299"><span class="icon-instagram"></span></a></li>
+                        <li class="ftco-animate"><a href="https://linkedin.com/in/ayush2281/" target="_blank"><span class="icon-linkedin"></span></a></li>
+                        <li class="ftco-animate"><a href="https://github.com/ayush2281" target="_blank"><span class="icon-github"></span></a></li>
+                        <li class="ftco-animate"><a href="https://codolio.com/profile/Ayush2281" target="_blank"><span class="icon-briefcase"></span></a></li>
                     </ul>
                     <br>
                 </div>
@@ -643,7 +448,6 @@
     <script src="js/scrollax.min.js"></script>
     <script src="js/main.js"></script>
 
-    <!-- FAILSAFE Loader Handler -->
     <script>
         (function() {
             function hideLoader() {
@@ -679,15 +483,16 @@
         <!-- Messages Container -->
         <div id="chat-messages" style="flex: 1; padding: 14px; overflow-y: auto; font-size: 13.5px; display: flex; flex-direction: column; gap: 10px;">
             <div style="background: #1a1a1a; color: #ddd; padding: 10px 14px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%;">
-                Hi! I'm Ayush's AI representative. Ask me anything about his projects, 360-day LeetCode streak, background, or why HR should hire him!
+                Hi! I'm Ayush's AI representative. Ask me about his Ethara.ai internship, Brain-Globe open source contribution, Gesture Calculator paper, or 760+ DSA problems!
             </div>
         </div>
 
         <!-- Quick Suggestion Pills -->
         <div style="padding: 6px 12px; display: flex; gap: 6px; overflow-x: auto; background: #0a0a0a; border-top: 1px solid #1f1f1f;">
-            <button onclick="sendQuickMsg('Why should HR hire Ayush?')" style="background: #1e1e1e; color: #FFC107; border: 1px solid #333; border-radius: 12px; padding: 4px 10px; font-size: 11px; cursor: pointer; white-space: nowrap;">Why hire Ayush?</button>
-            <button onclick="sendQuickMsg('What are his top projects?')" style="background: #1e1e1e; color: #FFC107; border: 1px solid #333; border-radius: 12px; padding: 4px 10px; font-size: 11px; cursor: pointer; white-space: nowrap;">Top Projects</button>
-            <button onclick="sendQuickMsg('What is his LeetCode streak?')" style="background: #1e1e1e; color: #FFC107; border: 1px solid #333; border-radius: 12px; padding: 4px 10px; font-size: 11px; cursor: pointer; white-space: nowrap;">LeetCode Streak</button>
+            <button onclick="sendQuickMsg('Show GitHub and LinkedIn profiles')" style="background: #1e1e1e; color: #FFC107; border: 1px solid #333; border-radius: 12px; padding: 4px 10px; font-size: 11px; cursor: pointer; white-space: nowrap;">Profiles Links</button>
+            <button onclick="sendQuickMsg('What is his college and education?')" style="background: #1e1e1e; color: #FFC107; border: 1px solid #333; border-radius: 12px; padding: 4px 10px; font-size: 11px; cursor: pointer; white-space: nowrap;">Education</button>
+            <button onclick="sendQuickMsg('Tell me about his Ethara.ai role')" style="background: #1e1e1e; color: #FFC107; border: 1px solid #333; border-radius: 12px; padding: 4px 10px; font-size: 11px; cursor: pointer; white-space: nowrap;">Ethara.ai Intern</button>
+            <button onclick="sendQuickMsg('What are his top projects and research?')" style="background: #1e1e1e; color: #FFC107; border: 1px solid #333; border-radius: 12px; padding: 4px 10px; font-size: 11px; cursor: pointer; white-space: nowrap;">Projects</button>
         </div>
 
         <!-- Input Area -->
@@ -697,108 +502,110 @@
         </div>
     </div>
 
-    <!-- ZERO-LATENCY LOCAL AI ENGINE WITH TYPEWRITER ANIMATION & FIXED WORD SPACING -->
-<script>
-    const localKnowledge = [
-        {
-            keywords: ["hire", "why", "recruit", "choose", "reason", "value", "candidate"],
-            answer: "Ayush combines strong computer science fundamentals with remarkable consistency (360-day LeetCode streak, 400+ solved problems) and hands-on experience in LLM post-training and computer vision research, making him ready to deliver value immediately."
-        },
-        {
-            keywords: ["project", "build", "gesture", "calculator", "works", "top"],
-            answer: "His featured project is the Virtual Hand-Gesture Calculator built using Python, OpenCV, and MediaPipe. He has also built 10+ ML models (Credit Card Fraud, Diabetes Prediction, Spam Filter, Movie Recommender) and works on privacy-preserving Edge-AI research."
-        },
-        {
-            keywords: ["leetcode", "streak", "coding", "problem", "codolio", "algo", "dsa"],
-            answer: "Ayush has solved over 400 problems on LeetCode with an uninterrupted 360-day daily coding challenge streak! You can view his detailed coding profiles on Codolio and GitHub."
-        },
-        {
-            keywords: ["ethara", "intern", "job", "role", "work", "experience"],
-            answer: "Ayush is currently an LLM Post-Training Intern at Ethara.ai, supercharging Large Language Models with human-aligned data, dataset curation, RLHF pipelines, and evaluation workflows."
-        },
-        {
-            keywords: ["skill", "strength", "stack", "technology", "python", "c++", "llm"],
-            answer: "His core technical skills include Python, C++, OpenCV, MediaPipe, LLM Post-Training, Prompt Engineering, Data Structures, Machine Learning algorithms, and GCP Cloud Computing."
-        },
-        {
-            keywords: ["weakness", "flaw", "improve", "over-engineer"],
-            answer: "He can occasionally over-engineer technical solutions for extreme edge cases, which he actively manages by setting strict sprint milestone deadlines."
-        },
-        {
-            keywords: ["platform", "outlier", "multimango", "task", "crowdsource"],
-            answer: "Ayush has executed AI task workflows and platform guidelines with high precision on technical platforms like Outlier and Multimango."
-        },
-        {
-            keywords: ["contact", "email", "phone", "reach", "resume", "cv", "location"],
-            answer: "You can reach Ayush via email at ayushsingh2281@gmail.com, call +91 7652087557, or click the 'Download CV' button on his resume section!"
-        }
-    ];
-
-    function toggleChat() {
-        const win = document.getElementById('ai-chat-window');
-        win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none';
-    }
-
-    function sendQuickMsg(text) {
-        document.getElementById('chat-input').value = text;
-        sendMessage();
-    }
-
-    function queryEngine(userInput) {
-        const query = userInput.toLowerCase();
-        for (const entry of localKnowledge) {
-            if (entry.keywords.some(kw => query.includes(kw))) {
-                return entry.answer;
+    <!-- ZERO-LATENCY ENGINE FULLY ENRICHED WITH RESUME DATA -->
+    <script>
+        const localKnowledge = [
+            {
+                keywords: ["github", "linkedin", "codolio", "social", "profile", "link", "handles"],
+                answer: "Here are Ayush's official profiles:\n• GitHub: <a href='https://github.com/ayush2281' target='_blank' style='color:#FFC107;'>github.com/ayush2281</a>\n• LinkedIn: <a href='https://linkedin.com/in/ayush2281/' target='_blank' style='color:#FFC107;'>linkedin.com/in/ayush2281</a>\n• Codolio: <a href='https://codolio.com/profile/Ayush2281' target='_blank' style='color:#FFC107;'>codolio.com/profile/Ayush2281</a>"
+            },
+            {
+                keywords: ["education", "college", "university", "school", "mangalmay", "degree", "btech", "b.tech", "study", "tribhuvan"],
+                answer: "Ayush is pursuing a B.Tech in Computer Science and Engineering (Artificial Intelligence) at Mangalmay Institute of Engineering and Technology, Greater Noida (2023–2027). He completed Senior Secondary School at Tribhuvan Devi Academy, Sultanpur UP (2020–2022)."
+            },
+            {
+                keywords: ["ethara", "post-training", "intern", "rlhf", "alignment", "annotation", "preference", "gurugram"],
+                answer: "Ayush worked as an LLM Post-Training Intern at Ethara.ai (Gurugram/Remote, Feb–May 2026). He specialized in supercharging LLMs with human-aligned data, developing evaluation workflows, RLHF pipelines, and preference data annotation."
+            },
+            {
+                keywords: ["brain-globe", "brainglobe", "gsoc", "open source", "opensource", "cell-finder", "cellfinder", "pr", "pull request", "519"],
+                answer: "Ayush is an Open Source Contributor to Brain-Globe (GSoC 2025 community). He contributed to 'cell-finder' in the neuroscience suite and authored accepted PR #519 resolving a critical PyTorch dependency issue, officially listing him on their project site!"
+            },
+            {
+                keywords: ["cloud", "gcp", "arcade", "legend", "google cloud", "facilitator", "milestone"],
+                answer: "As a Google Cloud Arcade Facilitator (Apr–Jun 2025), Ayush achieved 'Legend Milestone' status by deploying and managing complex cloud solutions across Compute, Storage, and Cloud AI/ML."
+            },
+            {
+                keywords: ["project", "calculator", "gesture", "hand", "springer", "icmce", "paper", "publication", "conference"],
+                answer: "His major research project is the Virtual Hand-Gesture Calculator. Presented at ICMCE-2026 and accepted as a Springer book chapter, it uses OpenCV, MediaPipe, and the Gemini API for real-time gesture-controlled math execution."
+            },
+            {
+                keywords: ["ml", "machine learning", "diabetes", "heart", "logistic", "svm", "scikit", "pandas"],
+                answer: "Ayush built high-accuracy ML models including Diabetes Prediction (88% accuracy using SVM and StandardScaler) and Heart Disease Risk Prediction (85% accuracy using Logistic Regression and stratified splits)."
+            },
+            {
+                keywords: ["leetcode", "dsa", "problem", "760", "coding", "solve", "aws cloud club", "sharda"],
+                answer: "Ayush has solved 760+ DSA problems across LeetCode and Codolio. He is also an active member of the AWS Cloud Club at Sharda University."
+            },
+            {
+                keywords: ["skill", "stack", "language", "tool", "pytorch", "opencv", "c++", "python", "vscode", "pycharm", "jupyter"],
+                answer: "His technical stack includes Python, C, C++, PyTorch, Scikit-Learn, OpenCV, Pandas, NumPy, Generative AI (LLM Post-Training, Prompt Engineering), and tools like VS Code, PyCharm, IntelliJ, Jupyter, and Colab."
+            },
+            {
+                keywords: ["contact", "email", "phone", "number", "reach", "address", "location"],
+                answer: "You can contact Ayush in Greater Noida, India via:\n• Email: <a href='mailto:ayushthakur2281@gmail.com' style='color:#FFC107;'>ayushthakur2281@gmail.com</a>\n• Phone: +91 7652087557\n• GitHub: <a href='https://github.com/ayush2281' target='_blank' style='color:#FFC107;'>github.com/ayush2281</a>"
+            },
+            {
+                keywords: ["hire", "why", "recruit", "choose", "reason", "value"],
+                answer: "Ayush combines proven algorithmic mastery (760+ DSA problems solved) with cutting-edge industry exposure in LLM Post-Training at Ethara.ai, open-source GSoC contributions (Brain-Globe PR #519), and a Springer-published Computer Vision research paper!"
             }
-        }
-        return "Ayush is an AI Engineer and LLM Post-Training Specialist at Ethara.ai with 400+ LeetCode problems solved and a 360-day coding streak. Try asking about his projects, skills, or why HR should hire him!";
-    }
+        ];
 
-    // Typewriter Effect
-    function typeWriterEffect(element, text, speed = 25) {
-        let i = 0;
-        element.textContent = ''; 
-        
-        function type() {
-            if (i < text.length) {
-                element.textContent += text.charAt(i);
-                i++;
-                const msgBox = document.getElementById('chat-messages');
-                msgBox.scrollTop = msgBox.scrollHeight;
-                setTimeout(type, speed);
+        function toggleChat() {
+            const win = document.getElementById('ai-chat-window');
+            win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none';
+        }
+
+        function sendQuickMsg(text) {
+            document.getElementById('chat-input').value = text;
+            sendMessage();
+        }
+
+        function queryEngine(userInput) {
+            const query = userInput.toLowerCase();
+            for (const entry of localKnowledge) {
+                if (entry.keywords.some(kw => query.includes(kw))) {
+                    return entry.answer;
+                }
             }
+            return "Ayush is an AI Engineer with 760+ DSA problems solved, LLM Post-Training experience at Ethara.ai, and GSoC open-source contributions to Brain-Globe. Ask me about his college, projects, GitHub/LinkedIn links, or research paper!";
         }
-        type();
-    }
 
-    function sendMessage() {
-        const input = document.getElementById('chat-input');
-        const msgBox = document.getElementById('chat-messages');
-        if (!input.value.trim()) return;
+        // Typewriter Effect with HTML Link Support
+        function typeWriterEffect(element, htmlText, speed = 20) {
+            element.innerHTML = htmlText;
+            const msgBox = document.getElementById('chat-messages');
+            msgBox.scrollTop = msgBox.scrollHeight;
+        }
 
-        const userMsg = input.value;
-        
-        // Render User Bubble
-        msgBox.innerHTML += `<div style="display: flex; justify-content: flex-end;"><span style="background: #FFC107; color: #000; font-weight: 600; padding: 8px 12px; border-radius: 12px; max-width: 80%; white-space: pre-wrap; word-break: break-word;">${userMsg}</span></div>`;
-        input.value = '';
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const msgBox = document.getElementById('chat-messages');
+            if (!input.value.trim()) return;
 
-        // Render Bot Bubble (with white-space: pre-wrap & word-break: break-word)
-        const botMsgDiv = document.createElement('div');
-        botMsgDiv.style.display = 'flex';
-        const bubbleSpan = document.createElement('span');
-        bubbleSpan.style.cssText = "background: #1a1a1a; color: #888; padding: 10px 14px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%; white-space: pre-wrap; word-break: break-word; overflow-wrap: break-word; line-height: 1.4;";
-        bubbleSpan.innerText = "Thinking...";
-        botMsgDiv.appendChild(bubbleSpan);
-        msgBox.appendChild(botMsgDiv);
-        msgBox.scrollTop = msgBox.scrollHeight;
+            const userMsg = input.value;
+            
+            // Render User Bubble
+            msgBox.innerHTML += `<div style="display: flex; justify-content: flex-end;"><span style="background: #FFC107; color: #000; font-weight: 600; padding: 8px 12px; border-radius: 12px; max-width: 80%; white-space: pre-wrap; word-break: break-word;">${userMsg}</span></div>`;
+            input.value = '';
 
-        const reply = queryEngine(userMsg);
+            // Render Bot Bubble
+            const botMsgDiv = document.createElement('div');
+            botMsgDiv.style.display = 'flex';
+            const bubbleSpan = document.createElement('span');
+            bubbleSpan.style.cssText = "background: #1a1a1a; color: #888; padding: 10px 14px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%; white-space: pre-wrap; word-break: break-word; overflow-wrap: break-word; line-height: 1.4;";
+            bubbleSpan.innerText = "Thinking...";
+            botMsgDiv.appendChild(bubbleSpan);
+            msgBox.appendChild(botMsgDiv);
+            msgBox.scrollTop = msgBox.scrollHeight;
 
-        setTimeout(() => {
-            bubbleSpan.style.color = "#ddd";
-            typeWriterEffect(bubbleSpan, reply, 25);
-        }, 1000);
-    }
+            const reply = queryEngine(userMsg);
+
+            setTimeout(() => {
+                bubbleSpan.style.color = "#ddd";
+                typeWriterEffect(bubbleSpan, reply, 20);
+            }, 900);
+        }
     </script>
 </body>
 
