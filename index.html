@@ -482,8 +482,11 @@
 
         <!-- Messages Container -->
         <div id="chat-messages" style="flex: 1; padding: 14px; overflow-y: auto; font-size: 13.5px; display: flex; flex-direction: column; gap: 10px;">
-            <div style="background: #1a1a1a; color: #ddd; padding: 10px 14px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%;">
-                Hi! I'm Ayush's AI representative. Ask me about his Ethara.ai internship, Brain-Globe open source contribution, Gesture Calculator paper, or 760+ DSA problems!
+            <div style="display: flex; align-items: flex-start; gap: 8px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Ayush AI Bot" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover; background: #1a1a1a; padding: 2px; border: 1px solid #FFC107; flex-shrink: 0; margin-top: 2px;">
+                <span style="background: #1a1a1a; color: #ddd; padding: 10px 14px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 80%; white-space: pre-wrap; word-break: break-word; overflow-wrap: break-word; line-height: 1.4;">
+                    Hi! I'm Ayush's AI representative. Ask me about his Ethara.ai internship, Brain-Globe open source contribution, Gesture Calculator paper, or 760+ DSA problems!
+                </span>
             </div>
         </div>
 
@@ -502,7 +505,7 @@
         </div>
     </div>
 
-    <!-- ZERO-LATENCY ENGINE FULLY ENRICHED WITH RESUME DATA -->
+    <!-- ZERO-LATENCY ENGINE WITH BOT AVATAR -->
     <script>
         const localKnowledge = [
             {
@@ -571,8 +574,7 @@
             return "Ayush is an AI Engineer with 760+ DSA problems solved, LLM Post-Training experience at Ethara.ai, and GSoC open-source contributions to Brain-Globe. Ask me about his college, projects, GitHub/LinkedIn links, or research paper!";
         }
 
-        // Typewriter Effect with HTML Link Support
-        function typeWriterEffect(element, htmlText, speed = 20) {
+        function typeWriterEffect(element, htmlText) {
             element.innerHTML = htmlText;
             const msgBox = document.getElementById('chat-messages');
             msgBox.scrollTop = msgBox.scrollHeight;
@@ -585,16 +587,24 @@
 
             const userMsg = input.value;
             
-            // Render User Bubble
+            // 1. Render User Message
             msgBox.innerHTML += `<div style="display: flex; justify-content: flex-end;"><span style="background: #FFC107; color: #000; font-weight: 600; padding: 8px 12px; border-radius: 12px; max-width: 80%; white-space: pre-wrap; word-break: break-word;">${userMsg}</span></div>`;
             input.value = '';
 
-            // Render Bot Bubble
+            // 2. Render Bot Wrapper with Public AI Robot Icon
             const botMsgDiv = document.createElement('div');
-            botMsgDiv.style.display = 'flex';
+            botMsgDiv.style.cssText = "display: flex; align-items: flex-start; gap: 8px;";
+
+            const avatarImg = document.createElement('img');
+            avatarImg.src = "https://cdn-icons-png.flaticon.com/512/4712/4712109.png"; 
+            avatarImg.alt = "Ayush AI Bot";
+            avatarImg.style.cssText = "width: 28px; height: 28px; border-radius: 50%; object-fit: cover; background: #1a1a1a; padding: 2px; border: 1px solid #FFC107; flex-shrink: 0; margin-top: 2px;";
+
             const bubbleSpan = document.createElement('span');
-            bubbleSpan.style.cssText = "background: #1a1a1a; color: #888; padding: 10px 14px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 85%; white-space: pre-wrap; word-break: break-word; overflow-wrap: break-word; line-height: 1.4;";
+            bubbleSpan.style.cssText = "background: #1a1a1a; color: #888; padding: 10px 14px; border-radius: 12px; border: 1px solid #2a2a2a; max-width: 80%; white-space: pre-wrap; word-break: break-word; overflow-wrap: break-word; line-height: 1.4;";
             bubbleSpan.innerText = "Thinking...";
+
+            botMsgDiv.appendChild(avatarImg);
             botMsgDiv.appendChild(bubbleSpan);
             msgBox.appendChild(botMsgDiv);
             msgBox.scrollTop = msgBox.scrollHeight;
@@ -603,7 +613,7 @@
 
             setTimeout(() => {
                 bubbleSpan.style.color = "#ddd";
-                typeWriterEffect(bubbleSpan, reply, 20);
+                typeWriterEffect(bubbleSpan, reply);
             }, 900);
         }
     </script>
